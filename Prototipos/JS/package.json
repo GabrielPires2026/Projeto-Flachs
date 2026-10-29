@@ -1,0 +1,11 @@
+
+{
+  "name": "projeto-flachs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Registro socioeconomico com provas em audio",
+  "main": "Prototipos/JS/main.js",
+  "scripts": {
+    "start": "Prototipos/JS/main.js"
+  }
+}
