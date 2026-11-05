@@ -149,7 +149,44 @@ class Entregador extends usuario{
 
 
  } 
-class Empresario{
+class Empresario extends Usuario{
+    //Propriedades do objeto empresario
+    #_saldoDaEmpresa;
+    #_servicosFornecidos;
+    #_cnpj;
+
+    constructor(nome, senha, profissao = undefined, saldo = 0, saldoDaEmpresa, servicosFornecidos, cnpj){
+        super(nome, senha, profissao, saldo);
+        this.#_saldoDaEmpresa = saldoDaEmpresa;
+        this.#_servicosFornecidos = servicosFornecidos;
+        this.#_cnpj = cnpj;
+    }
+
+    get saldoDaEmpresa(){
+        return this.#_saldoDaEmpresa;
+    }
+    get servicosFornecidos(){
+        return this.#_servicosFornecidos;
+    }
+    get cnpj(){
+        return this.#_cnpj;
+    }
+
+    divulgarServicos(servico, vagas, remuneracao){
+        //Modificacao Futura
+    }
+    contratarEntregador(entregador){
+        //Modificacao futura;
+    }
+    contratarVendedor(vendedor){
+        //Modificacao Futura
+    }
+    aprovarServico(servico){
+        //Modificacao futura
+    }
+    pagarPorServico(servico, valor){
+        //modificacao futura
+    }
 
  } 
 class Vendedor { } 
