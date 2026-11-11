@@ -1,6 +1,7 @@
 import readline from 'node:readline/promises'; 
 import {stdin as input, stdout as output} from 'process'; 
 import fs from 'node:fs'; 
+import path from 'node:path';
 
 const rl = readline.createInterface({input, output}); 
 
@@ -154,12 +155,17 @@ class Empresario extends Usuario{
     #_saldoDaEmpresa;
     #_servicosFornecidos;
     #_cnpj;
+    #_num_funcionarios;
+    #_caminhoArquivo;
 
-    constructor(nome, senha, profissao = undefined, saldo = 0, saldoDaEmpresa, servicosFornecidos, cnpj){
+
+    constructor(nome, senha, profissao = undefined, saldo = 0, saldoDaEmpresa,  cnpj, funcionarios = 0){
         super(nome, senha, profissao, saldo);
         this.#_saldoDaEmpresa = saldoDaEmpresa;
-        this.#_servicosFornecidos = servicosFornecidos;
+        this.#_servicosFornecidos = [];
         this.#_cnpj = cnpj;
+        this.#_num_funcionarios = funcionarios;
+        this.#_caminhoArquivo = path.join(__dirname, "servicos.json", "utf-8");
     }
 
     get saldoDaEmpresa(){
@@ -171,9 +177,27 @@ class Empresario extends Usuario{
     get cnpj(){
         return this.#_cnpj;
     }
+    get num_funcionarios(){
+        return this.#_num_funcionarios;
+    }
 
+    salvarServico(){
+        const novoServico = JSON.stringify(this.#_servicosFornecidos, null, 2);
+        fs.writeFileSync(this.#_caminhoArquivo, novoServico, "utf-8");
+        console.log("Servicos salvos em servidor");
+
+    }
+    
+    adicionarNovoServico(servico){
+        this.#_servicosFornecidos.push(servico);
+        console.log("Novo servico adicionado a empresa");
+        this.salvarServico();
+    }
+    
     divulgarServicos(servico, vagas, remuneracao){
-        //Modificacao Futura
+        
+        
+        
     }
     contratarEntregador(entregador){
         //Modificacao futura;
@@ -189,7 +213,13 @@ class Empresario extends Usuario{
     }
 
  } 
-class Vendedor { } 
+class Vendedor extends Usuario{
+
+    #_VendasEmAndamento;
+    #_saldoVendas;
+    #_produtos;
+
+ } 
 
 console.log("==================================================================================="); 
 console.log(" SEJA BEM-VINDO AO PROJETO FLACHS "); 
