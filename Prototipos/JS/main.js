@@ -19,70 +19,108 @@ class Usuario {
   get profissao() { return this.#_profissao; }
   get saldo() { return this.#_saldo >= 1 ? this.#_saldo : 0; }
   set saldo(novoSaldo) { this.#_saldo = novoSaldo; }
+
+  // usuario.json: só guarda o básico, cada filho guarda o resto no arquivo dele
+  salvarUsuario() {
+    const caminho = path.join(__dirname, "usuario.json");
+    const dados = { nome: this.#_nome, profissao: this.#_profissao, saldo: this.#_saldo };
+    fs.writeFileSync(caminho, JSON.stringify(dados, null, 2), "utf-8");
+  }
 }
 
 // ============ CLIENTE ============
 class Cliente extends Usuario {
-  #_pedido; #_statusDaCompra; #_produto;
+  #_pedido; #_statusDaCompra; #_produto; #_caminhoArquivo;
   constructor(nome, senha, profissao, saldo, pedido, statusDaCompra = undefined, produto) {
     super(nome, senha, profissao, saldo);
     this.#_pedido = pedido; this.#_statusDaCompra = statusDaCompra; this.#_produto = produto;
+    this.#_caminhoArquivo = path.join(__dirname, "cliente.json");
+    this.carregar();
   }
   get pedido() { if (this.saldo >= 1) return this.#_pedido; }
   get statusDaCompra() { return this.#_statusDaCompra; }
+  get produto() { return this.#_produto; }
+
+  carregar() {
+    if (!fs.existsSync(this.#_caminhoArquivo)) { this.salvar(); return; }
+    const conteudo = fs.readFileSync(this.#_caminhoArquivo, "utf-8");
+    if (!conteudo.trim()) return;
+    const dados = JSON.parse(conteudo);
+    this.#_pedido = dados.pedidos?.[0] ?? this.#_pedido;
+    this.#_produto = dados.produto ?? this.#_produto;
+    this.#_statusDaCompra = dados.statusDaCompra ?? this.#_statusDaCompra;
+  }
+  salvar() {
+    const dados = { pedidos: this.#_pedido ? [this.#_pedido] : [], produto: this.#_produto, statusDaCompra: this.#_statusDaCompra };
+    fs.writeFileSync(this.#_caminhoArquivo, JSON.stringify(dados, null, 2), "utf-8");
+  }
   efetuarCompra(valor, produto) {
-    if (this.saldo >= valor) { this.saldo = this.saldo - valor; this.#_produto = produto; return this.saldo; }
-    else console.log("Saldo insuficiente!");
+    if (this.saldo >= valor) {
+      this.saldo = this.saldo - valor; this.#_produto = produto; this.#_pedido = produto; this.#_statusDaCompra = "comprado";
+      this.salvar(); return this.saldo;
+    } else console.log("Saldo insuficiente!");
   }
   receberCompra() {
     if (this.statusDaCompra) console.log("A compra foi recebida com sucesso!");
     else console.log("Nenhuma compra recebida ainda!");
   }
-  devolverCompra(valor, produto) { this.saldo = this.saldo + valor; console.log("Devolução concedida com sucesso!"); }
+  devolverCompra(valor, produto) { this.saldo = this.saldo + valor; this.#_statusDaCompra = "devolvido"; this.salvar(); console.log("Devolução concedida com sucesso!"); }
 }
 
 // ============ ENTREGADOR ============
 class Entregador extends Usuario {
-  #_prazoEntrega; #_servicosEmAndamento; #_enderecoPedido;
+  #_prazoEntrega; #_servicosEmAndamento; #_enderecoPedido; #_caminhoArquivo;
   constructor(nome, senha, saldo = 0, prazoEntrega, enderecoPedido = {}) {
     super(nome, senha, 'entregador', saldo);
     this.#_prazoEntrega = prazoEntrega; this.#_servicosEmAndamento = []; this.#_enderecoPedido = enderecoPedido;
+    this.#_caminhoArquivo = path.join(__dirname, "entregador.json");
+    this.carregar();
   }
   get prazoEntrega() { return this.#_prazoEntrega; }
-  get servicosEmAndamento() { return this.#_servicosEmAndamento; } // CORRIGIDO: só 1 getter agora
+  get servicosEmAndamento() { return this.#_servicosEmAndamento; }
   get enderecoPedido() { return this.#_enderecoPedido; }
 
+  carregar() {
+    if (!fs.existsSync(this.#_caminhoArquivo)) { this.salvar(); return; }
+    const conteudo = fs.readFileSync(this.#_caminhoArquivo, "utf-8");
+    if (!conteudo.trim()) return;
+    const dados = JSON.parse(conteudo);
+    this.#_servicosEmAndamento = dados.servicosEmAndamento || [];
+  }
+  salvar() {
+    const dados = { servicosEmAndamento: this.#_servicosEmAndamento };
+    fs.writeFileSync(this.#_caminhoArquivo, JSON.stringify(dados, null, 2), "utf-8");
+  }
   escolherServicos(idServico, pedido, endereco, valor, statusDoServico = "pendente") {
     const servico = { id: idServico, pedido, endereco, valor, status: statusDoServico };
     this.#_servicosEmAndamento.push(servico);
-    console.log(`Serviço ${idServico} - ${pedido} escolhido. Aguardando aceitar.`);
-    return servico;
+    console.log(`Serviço ${idServico} - ${pedido} escolhido. Aguardando aceitar.`); this.salvar(); return servico;
   }
   aceitarServico(idServico) {
     const servico = this.#_servicosEmAndamento.find(s => s.id === idServico);
     if (!servico) return console.log("Serviço não encontrado");
     if (servico.status !== "pendente") return console.log(`Não dá pra aceitar, status atual: ${servico.status}`);
-    servico.status = "aceito"; console.log(`Serviço ${idServico} aceito! Pode buscar o pedido.`);
+    servico.status = "aceito"; console.log(`Serviço ${idServico} aceito! Pode buscar o pedido.`); this.salvar();
   }
   fazerServico(idServico) {
     const servico = this.#_servicosEmAndamento.find(s => s.id === idServico);
     if (!servico) return console.log("Serviço não encontrado");
     if (servico.status !== "aceito") return console.log(`Precisa aceitar antes. Status: ${servico.status}`);
-    servico.status = "em andamento"; console.log(`Entregando ${servico.pedido} para ${servico.endereco}...`);
+    servico.status = "em andamento"; console.log(`Entregando ${servico.pedido} para ${servico.endereco}...`); this.salvar();
   }
   finalizarServico(idServico) {
     const servico = this.#_servicosEmAndamento.find(s => s.id === idServico);
     if (!servico) return console.log("Serviço não encontrado");
     if (servico.status !== "em andamento") return console.log(`Precisa estar fazendo. Status: ${servico.status}`);
-    servico.status = "finalizado"; console.log(`Serviço ${idServico} finalizado!`); this.receberPorServico(servico.valor);
+    servico.status = "finalizado"; console.log(`Serviço ${idServico} finalizado!`); this.salvar(); this.receberPorServico(servico.valor);
   }
-  receberPorServico(valor) { this.saldo = this.saldo + valor; console.log(`Você recebeu R$${valor}. Saldo atual: R$${this.saldo}`); }
+  receberPorServico(valor) { this.saldo = this.saldo + valor; console.log(`Você recebeu R$${valor}. Saldo atual: R$${this.saldo}`); this.salvar(); }
   recusarServico(idServico) {
     const indice = this.#_servicosEmAndamento.findIndex(s => s.id === idServico);
     if (indice === -1) return console.log("Serviço não encontrado");
     const servico = this.#_servicosEmAndamento[indice];
     if (servico.status !== "pendente") return console.log(`Não dá pra recusar, já está ${servico.status}`);
-    this.#_servicosEmAndamento.splice(indice, 1); console.log(`Serviço ${idServico} recusado e removido da sua lista.`);
+    this.#_servicosEmAndamento.splice(indice, 1); console.log(`Serviço ${idServico} recusado.`); this.salvar();
   }
 }
 
@@ -92,7 +130,9 @@ class Empresario extends Usuario {
   constructor(nome, senha, profissao = undefined, saldo = 0, saldoDaEmpresa, cnpj, funcionarios = 0) {
     super(nome, senha, profissao, saldo);
     this.#_saldoDaEmpresa = saldoDaEmpresa; this.#_servicosFornecidos = []; this.#_cnpj = cnpj;
-    this.#_num_funcionarios = funcionarios; this.#_caminhoArquivo = path.join(__dirname, "servicos.json");
+    this.#_num_funcionarios = funcionarios;
+    // MUDANÇA: era servicos.json, agora empresario.json
+    this.#_caminhoArquivo = path.join(__dirname, "empresario.json");
     this.#_funcionarios = []; this.#_servicosAprovados = []; this.carregar();
   }
   get saldoDaEmpresa() { return this.#_saldoDaEmpresa; }
@@ -102,13 +142,11 @@ class Empresario extends Usuario {
   get funcionarios() { return this.#_funcionarios; }
   get servicosAprovados() { return this.#_servicosAprovados; }
 
-  // CORRIGIDO: carrega OBJETO, não só array
   carregar() {
     if (!fs.existsSync(this.#_caminhoArquivo)) { this.salvarServico(); return; }
     const conteudo = fs.readFileSync(this.#_caminhoArquivo, "utf-8");
     if (!conteudo.trim()) return;
     const dados = JSON.parse(conteudo);
-    // Se o JSON antigo era só ["Entregador"], trata como array
     if (Array.isArray(dados)) { this.#_servicosFornecidos = dados; return; }
     this.#_servicosFornecidos = dados.servicosFornecidos || [];
     this.#_servicosAprovados = dados.servicosAprovados || [];
@@ -116,16 +154,10 @@ class Empresario extends Usuario {
     this.#_saldoDaEmpresa = dados.saldoDaEmpresa ?? this.#_saldoDaEmpresa;
     this.#_num_funcionarios = this.#_funcionarios.length;
   }
-  // CORRIGIDO: salva OBJETO completo
   salvarServico() {
-    const dados = {
-      servicosFornecidos: this.#_servicosFornecidos,
-      servicosAprovados: this.#_servicosAprovados,
-      funcionarios: this.#_funcionarios,
-      saldoDaEmpresa: this.#_saldoDaEmpresa
-    };
+    const dados = { servicosFornecidos: this.#_servicosFornecidos, servicosAprovados: this.#_servicosAprovados, funcionarios: this.#_funcionarios, saldoDaEmpresa: this.#_saldoDaEmpresa };
     fs.writeFileSync(this.#_caminhoArquivo, JSON.stringify(dados, null, 2), "utf-8");
-    console.log("Servicos salvos em servidor");
+    console.log("Servicos salvos em empresario.json");
   }
   adicionarNovoServico(servico) {
     if (this.#_servicosFornecidos.includes(servico)) { console.log("Serviço já existe"); return; }
@@ -153,14 +185,14 @@ class Empresario extends Usuario {
   aprovarServico(servico) {
     if (!this.#_servicosFornecidos.includes(servico)) return console.log(`Serviço ${servico} nem existe pra aprovar`);
     if (this.#_servicosAprovados.includes(servico)) return console.log(`Serviço ${servico} já estava aprovado`);
-    this.#_servicosAprovados.push(servico); console.log(`Serviço ${servico} aprovado! Agora pode ser contratado.`); this.salvarServico();
+    this.#_servicosAprovados.push(servico); console.log(`Serviço ${servico} aprovado!`); this.salvarServico();
   }
   pagarPorServico(servico, valor, quemRecebe) {
     if (!this.#_servicosAprovados.includes(servico)) return console.log(`Não dá pra pagar, ${servico} ainda não foi aprovado`);
-    if (this.#_saldoDaEmpresa < valor) return console.log(`Saldo da empresa insuficiente! Tem R$${this.#_saldoDaEmpresa}, precisa R$${valor}`);
+    if (this.#_saldoDaEmpresa < valor) return console.log(`Saldo insuficiente! Tem R$${this.#_saldoDaEmpresa}`);
     this.#_saldoDaEmpresa -= valor;
     if (quemRecebe) quemRecebe.saldo = quemRecebe.saldo + valor;
-    console.log(`Pago R$${valor} por ${servico} para ${quemRecebe?.nome || "funcionário"}. Saldo da empresa: R$${this.#_saldoDaEmpresa}`);
+    console.log(`Pago R$${valor} por ${servico} para ${quemRecebe?.nome || "funcionário"}. Saldo empresa: R$${this.#_saldoDaEmpresa}`);
     this.salvarServico();
   }
 }
@@ -184,7 +216,6 @@ class Vendedor extends Usuario {
   get totalProdutos() { return this.#_produtos.reduce((t, p) => t + p.estoque, 0); }
   get totalVendasPendentes() { return this.#_VendasEmAndamento.filter(v => v.status === "pendente").length; }
 
-  // CORRIGIDO: agora tem carregar() igual o Empresario
   carregar() {
     if (!fs.existsSync(this.#_caminhoArquivo)) { this.salvar(); return; }
     const conteudo = fs.readFileSync(this.#_caminhoArquivo, "utf-8");
@@ -244,7 +275,6 @@ console.log(" SEJA BEM-VINDO AO PROJETO FLACHS ");
 console.log("=====================================================================================");
 console.log("\n");
 
-// Teste completo
 const emp = new Empresario("Joao", "123", "empresario", 0, 10000, "123456");
 emp.divulgarServicos("Entregador", 2, 1800);
 emp.aprovarServico("Entregador");
