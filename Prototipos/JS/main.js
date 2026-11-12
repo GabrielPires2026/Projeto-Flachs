@@ -41,30 +41,48 @@ class Cliente extends Usuario {
   get statusDaCompra() { return this.#_statusDaCompra; }
   get produto() { return this.#_produto; }
 
+  //Metodo de carregamento de arquivos
   carregar() {
-    if (!fs.existsSync(this.#_caminhoArquivo)) { this.salvar(); return; }
-    const conteudo = fs.readFileSync(this.#_caminhoArquivo, "utf-8");
-    if (!conteudo.trim()) return;
-    const dados = JSON.parse(conteudo);
+    //Se os arquivos não existe, executa o codigo
+    if (!fs.existsSync(this.#_caminhoArquivo)) { this.salvar(); return; } //chama metodo responsavel por salvar arquivo
+    const conteudo = fs.readFileSync(this.#_caminhoArquivo, "utf-8"); //Lê arquivo previamente escrito na propriedade #_caminhoArquivo
+    if (!conteudo.trim()) return;  //Se não existe o conteudo no arquivo, retorna
+    const dados = JSON.parse(conteudo);  //Lê o arquivo do empresario.json como texto
     this.#_pedido = dados.pedidos?.[0] ?? this.#_pedido;
     this.#_produto = dados.produto ?? this.#_produto;
     this.#_statusDaCompra = dados.statusDaCompra ?? this.#_statusDaCompra;
   }
+
+
   salvar() {
+    //Executa se pedido existir
     const dados = { pedidos: this.#_pedido ? [this.#_pedido] : [], produto: this.#_produto, statusDaCompra: this.#_statusDaCompra };
-    fs.writeFileSync(this.#_caminhoArquivo, JSON.stringify(dados, null, 2), "utf-8");
+    fs.writeFileSync(this.#_caminhoArquivo, JSON.stringify(dados, null, 2), "utf-8"); //escreve o pedido no arquivo .json
   }
   efetuarCompra(valor, produto) {
+    //Executa o codigo somente se tiver saldo suficiente
     if (this.saldo >= valor) {
-      this.saldo = this.saldo - valor; this.#_produto = produto; this.#_pedido = produto; this.#_statusDaCompra = "comprado";
-      this.salvar(); return this.saldo;
+      this.saldo = this.saldo - valor; //Subtrai do saldo o valor da compra
+       this.#_produto = produto; //Propriedade #_produto recebe o parametro do objeto
+       this.#_pedido = produto; //Propriedade #_pedido recebe o parametro produto
+        this.#_statusDaCompra = "comprado"; //Altera o status da compra para "Cumprido"
+      this.salvar(); //Salva as informacoes da compra
+       return this.saldo; //Exibe o saldo atual
     } else console.log("Saldo insuficiente!");
   }
   receberCompra() {
+    //Executa o codigo, se o status for "recebido"
     if (this.statusDaCompra) console.log("A compra foi recebida com sucesso!");
+    //Executa o codigo quando a compra não for recebida ainda
     else console.log("Nenhuma compra recebida ainda!");
   }
-  devolverCompra(valor, produto) { this.saldo = this.saldo + valor; this.#_statusDaCompra = "devolvido"; this.salvar(); console.log("Devolução concedida com sucesso!"); }
+  devolverCompra(valor, produto) { 
+    this.saldo = this.saldo + valor; //Soma ao saldo o vslor do produto
+    this.#_statusDaCompra = "devolvido"; //Muda o status da compra para devolvido
+     this.salvar(); //salva a informação
+    console.log("Devolução concedida com sucesso!"); 
+
+  }
 }
 
 // ============ ENTREGADOR ============
