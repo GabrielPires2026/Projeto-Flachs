@@ -1,0 +1,117 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Deverá ser alterado durante as próximas modificações do código-->
+        <meta name="author" content="Gabriel Pires">
+        <meta name="description" content="Site de cadastro dos usuarios do Projeto FACHS">
+        <title>Página de Cadastro - Projeto FLACHS</title>
+        <link rel="stylesheet" href="#">
+    </head>
+    <body>
+        <!--Por enquanto o design será bem simples, diferente do design do figma-->
+        <h1>Seja Bem vindo ao Projeto FLACHS</h1>
+        <main>
+            <!--NENHUMA INFORMAÇÃO REAL DEVE SER USADA, PARA A PROPRIA SEGURANÇA DE QUEM ESTÁ TESTANDO-->
+            <section class="section-form-content">
+                <h1>Cadastre-se aqui:  </h1>
+                <form action="#" method="post">
+                    <fieldset> <legend>Informações pessoais</legend>
+
+                        <label for="inNome"> Digite seu nome:
+                        <input type="text" id="inNome" name="nome" required>
+                        </label>
+
+                    <label for="inEmail"> Digite um email válido:
+                        <input type="email" id="inEmail" name="e-mail" placeholder="Ex: nomeDoEmail@gmail.com" required>
+                    </label>
+
+                    <label for="inCpf">
+                        <input type="text" id="inCpf" name="cpf" required>
+                    </label>
+
+                    <label for="inSenha">
+                        <input type="password" id="inSenha" name="senha" required>
+                    </label>
+
+                    <label for="inConfirmaSenha">
+                        <input type="password" id="inConfirmarSenha" name="confirmarSenha" required>
+                    </label>
+
+
+
+
+                    </fieldset>
+
+                    <fieldset> <legend>Localização: </legend>
+                        <h2>Região:</h2>
+                        <label for="inEstado"> Digite o estado 
+                            <input type="text" id="inEstado" name="estado" required>
+                        </label>
+
+                        <label for="inCidade">Digite a cidade onde você mora
+                            <input type="text" id="inCidade" name="cidade" required>
+                        </label>
+                        <h2>Endereço: </h2>
+
+                        <label for="inBairro">Digite o bairro onde você mora 
+                            <input type="text" id="inBairro" name="bairro" required>
+                        </label>
+
+                        <label for="inRua"> Digite o nome da rua onde você mora 
+                            <input type="text" id="inRua" name="rua" required>
+                        </label>
+
+                        <label for="inNumero">Digite o número da sua residência
+                            <input type="number" id="inNumero">
+                            S/N <input type="radio" id="inSN" name="semNumero">
+                        </label>
+
+                        <label for="inComplemento">Complemento (opcional)
+                            <textarea id="inComplemento"></textarea>
+                        </label>
+
+
+
+
+
+
+
+
+                    </fieldset>
+
+                    <fieldset><legend>Forma de cadástro</legend>
+                    
+                    <h2>Como você deseja se cadastrar?</h2>
+
+                    <label for="inCliente">
+                        <input type="radio" id="inCliente" name="clientes"> sou cliente 
+                    </label>
+
+                    <label for="inEntregador">
+                        <input type="radio" id="inEntregador" name="entregadores"> Sou entregador 
+                    </label>
+
+                    <label for="inVendedor">
+                        <input type="radio" id="inVendedor" name="vendedores">Sou vendedor
+                    </label>
+
+                    <label for="inEmpresario">
+                        <input type="radio" id="inEmpresario" name="empresarios">Sou empresário
+                    </label>
+                    
+                    
+                    
+                    
+                    
+                    </fieldset>
+
+                    <input type="submit" id="btnEnviar" value="Cadastrar-se">
+                    <input type="reset" id="btnResetar" value="Recarregar página">
+
+
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
