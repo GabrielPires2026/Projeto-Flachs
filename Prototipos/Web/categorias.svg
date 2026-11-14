@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de Fundo dos Cards -->
+    <radialGradient id="cardGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2a2a2e"/>
+      <stop offset="100%" stop-color="#141416"/>
+    </radialGradient>
+    <linearGradient id="cardGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Gradientes Burger -->
+    <linearGradient id="bunTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="patty" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#592b15"/>
+      <stop offset="100%" stop-color="#321406"/>
+    </linearGradient>
+
+    <!-- Gradientes Pizza -->
+    <linearGradient id="crust" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <linearGradient id="cheese" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="60%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+
+    <!-- Gradientes Açaí -->
+    <radialGradient id="acaiCream" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="60%" stop-color="#3b0764"/>
+      <stop offset="100%" stop-color="#20033a"/>
+    </radialGradient>
+    <linearGradient id="bowl" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+
+    <!-- Gradientes Mercado -->
+    <linearGradient id="cartMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== 1. HAMBÚRGUER ==================== -->
+  <g id="categoria-hamburguer" transform="translate(10, 5)">
+    <!-- Moldura Arredondada -->
+    <rect width="80" height="80" rx="18" fill="url(#cardGrad)" stroke="#3f3f46" stroke-width="2.5"/>
+    <rect x="2" y="2" width="76" height="76" rx="16" fill="url(#cardGlow)"/>
+    <!-- Sombra -->
+    <ellipse cx="40" cy="64" rx="24" ry="5" fill="#000000" opacity="0.6"/>
+    <!-- Pão Superior -->
+    <path d="M19 37 C19 21 61 21 61 37 Z" fill="url(#bunTop)"/>
+    <!-- Sementes de Gergelim -->
+    <ellipse cx="30" cy="27" rx="1.3" ry="0.8" fill="#fef08a" transform="rotate(-15 30 27)"/>
+    <ellipse cx="40" cy="24" rx="1.3" ry="0.8" fill="#fef08a"/>
+    <ellipse cx="50" cy="27" rx="1.3" ry="0.8" fill="#fef08a" transform="rotate(20 50 27)"/>
+    <!-- Alface Ondulada -->
+    <path d="M16 37 C18 41 21 41 23 37 C26 42 30 42 33 37 C36 42 40 42 43 37 C46 42 50 42 53 37 C56 41 60 40 62 37 C64 38 65 41 63 42 C59 44 56 41 53 42 C49 44 45 41 42 42 C38 44 34 41 31 42 C27 44 23 41 21 42 C18 42 16 40 16 37 Z" fill="#22c55e"/>
+    <!-- Rodela de Tomate -->
+    <rect x="18" y="41" width="44" height="4.5" rx="2" fill="#ef4444"/>
+    <!-- Queijo Cheddar Derretido -->
+    <path d="M17 45 L63 45 L59 52 L51 46 L43 54 L35 46 L26 52 L21 45 Z" fill="#f59e0b"/>
+    <!-- Hambúrguer -->
+    <rect x="17" y="48" width="46" height="9" rx="4.5" fill="url(#patty)"/>
+    <line x1="26" y1="50" x2="31" y2="54" stroke="#220b02" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="38" y1="50" x2="43" y2="54" stroke="#220b02" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="50" y1="50" x2="55" y2="54" stroke="#220b02" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Pão Inferior -->
+    <path d="M20 57 L60 57 C60 62 56 66 48 66 L32 66 C24 66 20 62 20 57 Z" fill="#d97706"/>
+  </g>
+
+  <!-- ==================== 2. PIZZA ==================== -->
+  <g id="categoria-pizza" transform="translate(105, 5)">
+    <!-- Moldura Arredondada -->
+    <rect width="80" height="80" rx="18" fill="url(#cardGrad)" stroke="#3f3f46" stroke-width="2.5"/>
+    <rect x="2" y="2" width="76" height="76" rx="16" fill="url(#cardGlow)"/>
+    <!-- Sombra -->
+    <path d="M40 68 L16 30 Q40 18 64 30 Z" fill="#000000" opacity="0.45" transform="translate(0, 2)"/>
+    <!-- Queijo Derretido -->
+    <path d="M40 66 L17 26 Q40 16 63 26 Z" fill="url(#cheese)"/>
+    <!-- Borda Crocante -->
+    <path d="M16 26 Q40 15 64 26 C66 22 61 18 40 18 C19 18 14 22 16 26 Z" fill="url(#crust)"/>
+    <!-- Queijo na Ponta -->
+    <path d="M38 64 Q40 70 42 64 Z" fill="#fbbf24"/>
+    <!-- Pepperoni / Calabresa -->
+    <circle cx="34" cy="33" r="5.5" fill="#b91c1c"/>
+    <circle cx="34" cy="33" r="4.2" fill="#991b1b"/>
+    <circle cx="50" cy="36" r="6" fill="#b91c1c"/>
+    <circle cx="50" cy="36" r="4.6" fill="#991b1b"/>
+    <circle cx="39" cy="48" r="5" fill="#b91c1c"/>
+    <circle cx="39" cy="48" r="3.8" fill="#991b1b"/>
+    <circle cx="27" cy="42" r="4.2" fill="#b91c1c"/>
+    <!-- Manjericão -->
+    <path d="M44 28 C47 28 49 32 44 33 C41 33 42 29 44 28 Z" fill="#16a34a"/>
+    <path d="M29 50 C31 48 34 50 32 53 C29 52 28 51 29 50 Z" fill="#22c55e"/>
+  </g>
+
+  <!-- ==================== 3. AÇAÍ BOWL ==================== -->
+  <g id="categoria-acai" transform="translate(200, 5)">
+    <!-- Moldura Arredondada -->
+    <rect width="80" height="80" rx="18" fill="url(#cardGrad)" stroke="#3f3f46" stroke-width="2.5"/>
+    <rect x="2" y="2" width="76" height="76" rx="16" fill="url(#cardGlow)"/>
+    <!-- Sombra -->
+    <ellipse cx="40" cy="67" rx="26" ry="5" fill="#000000" opacity="0.5"/>
+    <!-- Base da Tigela -->
+    <path d="M15 41 C15 59 26 66 40 66 C54 66 65 59 65 41 Z" fill="url(#bowl)"/>
+    <!-- Superfície do Açaí -->
+    <ellipse cx="40" cy="41" rx="25" ry="10" fill="url(#acaiCream)"/>
+    <ellipse cx="40" cy="41" rx="25" ry="10" fill="none" stroke="#f8fafc" stroke-width="1.8"/>
+    <!-- Morangos -->
+    <g transform="translate(20, 36) rotate(-15)">
+      <path d="M0 5 C-3 0 0 -5 5 0 C8 3 3 8 0 5 Z" fill="#ef4444"/>
+      <circle cx="1.5" cy="1" r="0.4" fill="#fef08a"/>
+    </g>
+    <g transform="translate(25, 32) rotate(10)">
+      <path d="M0 6 C-4 0 0 -6 6 0 C9 4 4 9 0 6 Z" fill="#dc2626"/>
+      <circle cx="1.5" cy="1" r="0.5" fill="#fef08a"/>
+    </g>
+    <!-- Granola -->
+    <circle cx="38" cy="40" r="1.3" fill="#d97706"/>
+    <circle cx="41" cy="38" r="1.1" fill="#b45309"/>
+    <circle cx="37" cy="43" r="1.5" fill="#f59e0b"/>
+    <circle cx="42" cy="42" r="1.2" fill="#d97706"/>
+    <!-- Rodelas de Banana -->
+    <ellipse cx="49" cy="36" rx="4.5" ry="3.2" fill="#fef08a" stroke="#facc15" stroke-width="0.7"/>
+    <circle cx="49" cy="36" r="0.6" fill="#a16207"/>
+    <ellipse cx="54" cy="39" rx="4.5" ry="3.2" fill="#fef9c3" stroke="#facc15" stroke-width="0.7"/>
+    <circle cx="54" cy="39" r="0.6" fill="#a16207"/>
+    <ellipse cx="57" cy="44" rx="4.5" ry="3.2" fill="#fef08a" stroke="#facc15" stroke-width="0.7"/>
+    <circle cx="57" cy="44" r="0.6" fill="#a16207"/>
+    <ellipse cx="55" cy="49" rx="4.2" ry="3" fill="#fef9c3" stroke="#facc15" stroke-width="0.7"/>
+    <circle cx="55" cy="49" r="0.5" fill="#a16207"/>
+  </g>
+
+  <!-- ==================== 4. MERCADO ==================== -->
+  <g id="categoria-mercado" transform="translate(295, 5)">
+    <!-- Moldura Arredondada -->
+    <rect width="80" height="80" rx="18" fill="url(#cardGrad)" stroke="#3f3f46" stroke-width="2.5"/>
+    <rect x="2" y="2" width="76" height="76" rx="16" fill="url(#cardGlow)"/>
+    <!-- Sombra -->
+    <ellipse cx="40" cy="67" rx="22" ry="4.5" fill="#000000" opacity="0.45"/>
+    <!-- Produtos no Carrinho -->
+    <!-- Garrafa verde -->
+    <rect x="28" y="26" width="6" height="13" rx="1.5" fill="#10b981"/>
+    <rect x="30" y="23" width="2" height="3" rx="0.8" fill="#f59e0b"/>
+    <!-- Pão Baguete -->
+    <path d="M34 33 L42 22 C44 20 46 22 45 24 L39 35 Z" fill="#d97706"/>
+    <!-- Maçã Vermelha -->
+    <circle cx="47" cy="32" r="5" fill="#ef4444"/>
+    <path d="M47 27 Q49 25 51 26" stroke="#15803d" stroke-width="1.2" fill="none"/>
+    <!-- Caixa de Suco / Mantimento -->
+    <rect x="37" y="28" width="9" height="11" rx="1.2" fill="#f8fafc"/>
+    <rect x="37" y="31" width="9" height="3.5" fill="#3b82f6"/>
+    <!-- Carrinho de Compras -->
+    <path d="M19 34 L24 34 L31 52 L56 52 L61 37 L23 37" fill="none" stroke="url(#cartMetallic)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="31" y1="42" x2="58" y2="42" stroke="#38bdf8" stroke-width="1.5" opacity="0.8"/>
+    <line x1="34" y1="47" x2="54" y2="47" stroke="#38bdf8" stroke-width="1.5" opacity="0.8"/>
+    <!-- Rodas -->
+    <path d="M29 56 L54 56" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="33" cy="62" r="4" fill="#334155"/>
+    <circle cx="33" cy="62" r="1.8" fill="#94a3b8"/>
+    <circle cx="51" cy="62" r="4" fill="#334155"/>
+    <circle cx="51" cy="62" r="1.8" fill="#94a3b8"/>
+  </g>
+</svg>
