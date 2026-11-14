@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGradMercado" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2a2a2e"/>
+      <stop offset="100%" stop-color="#141416"/>
+    </radialGradient>
+    <linearGradient id="glowMercado" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="cartMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Moldura Arredondada Dark -->
+  <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#bgGradMercado)" stroke="#3f3f46" stroke-width="3"/>
+  <rect x="6" y="6" width="88" height="88" rx="20" fill="url(#glowMercado)"/>
+
+  <!-- Sombra no chão -->
+  <ellipse cx="50" cy="78" rx="26" ry="5" fill="#000000" opacity="0.45"/>
+
+  <!-- Itens dentro do Carrinho de Compras -->
+  <!-- Garrafa / Azeite / Bebida -->
+  <rect x="36" y="27" width="7" height="15" rx="2" fill="#10b981"/>
+  <rect x="38" y="23" width="3" height="4" rx="1" fill="#f59e0b"/>
+  <!-- Pão Baguete -->
+  <path d="M43 36 L52 23 C54 21 57 23 55 26 L48 37 Z" fill="#d97706"/>
+  <!-- Fruta Vermelha / Maçã -->
+  <circle cx="58" cy="35" r="6" fill="#ef4444"/>
+  <path d="M58 29 Q60 27 62 28" stroke="#15803d" stroke-width="1.5" fill="none"/>
+  <!-- Caixa de Mantimento / Leite -->
+  <rect x="47" y="30" width="10" height="13" rx="1.5" fill="#f8fafc"/>
+  <rect x="47" y="34" width="10" height="4" fill="#3b82f6"/>
+
+  <!-- Carrinho de Supermercado -->
+  <!-- Cesto do Carrinho -->
+  <path d="M26 38 L32 38 L40 60 L68 60 L74 42 L31 42" fill="none" stroke="url(#cartMetallic)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Grade interna do cesto -->
+  <line x1="40" y1="48" x2="71" y2="48" stroke="#38bdf8" stroke-width="1.8" opacity="0.8"/>
+  <line x1="43" y1="54" x2="66" y2="54" stroke="#38bdf8" stroke-width="1.8" opacity="0.8"/>
+  <line x1="50" y1="42" x2="48" y2="60" stroke="#38bdf8" stroke-width="1.8" opacity="0.8"/>
+  <line x1="60" y1="42" x2="58" y2="60" stroke="#38bdf8" stroke-width="1.8" opacity="0.8"/>
+
+  <!-- Chassi / Rodas -->
+  <path d="M38 65 L66 65" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Roda Esquerda -->
+  <circle cx="42" cy="71" r="4.5" fill="#334155"/>
+  <circle cx="42" cy="71" r="2" fill="#94a3b8"/>
+  <!-- Roda Direita -->
+  <circle cx="64" cy="71" r="4.5" fill="#334155"/>
+  <circle cx="64" cy="71" r="2" fill="#94a3b8"/>
+</svg>
