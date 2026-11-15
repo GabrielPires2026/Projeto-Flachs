@@ -1,0 +1,62 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="widtw=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Pires">
+    <meta name="description" content="Continuacao do cadastro de perfil, se o usuario escolher o perfil de empresario">
+    <title>Cadastro do empresário - Projeto FLACHS</title>
+    </head>
+    <body>
+        <main>
+            <h1>Cadastro do empresário: </h1>
+            <form action="#" method="POST">
+                <fieldset class="perfil-empresa"><legend>Perfil da empresa: </legend>
+                    <label for="opcao-pequeno-negocio"><input type="radio" id="opcao-pequeno-negocio" name="tipo-empresa">Pequeno negócio</label>
+                    <h3>Microempreendedores</h3>
+                    <spam class="container"><strong>Táxa por venda: 5%</strong></spam>
+                </article>
+                <article class="container-medio-negocio">
+                    <label for="opcao-medio-negocio"><input type="button" id="opcao-medio-negocio" name="tipo-empresa">Médio negócio</label>
+                    <h3>Lojas estabelecidas, padarias, mercearias e pequenos restaurantes</h3>
+                    <spam class="container"><strong>Táxa por venda:  12% </strong></spam>
+                </article>
+                <article class="container-grande-negocio">
+                    <label for="opcao-pequeno-negocio"><input type="button" id="opcao-grande-negocio" name="tipo-empresa">Grande megócio</label>
+                    <h3>Franquias, redes de fast-food e mercados maiores</h3>
+                    <spam class="container"><strong>Táxa por venda: 22%</strong></spam>
+                </fieldset>
+                <fieldset class="dados-loja"><legend>Dados da loja</legend>
+                    <label for="inNomeDoNegocio"><input type="text" id="inNomeDoNegocio" name="dados-loja" placeholder="Digite o nome do seu estabelecimento"></label>
+                    <label for="inTipoDeNegocio">
+                        <select id="inTipoDeNegocio"> Escolha um tipo de serviço:
+                            <option>Serviço</option>
+                            <option>Comércio</option>
+                        </select>
+                    </label>
+                    <label for="inHorario-funcionamento"><input type="text" id="inHorario-funcionamento" placeholder="Digite um horário de funcionamento, por exemplo, 08:00 às 17:00"></label>
+                    <label for="inDescricao-negocio"><input type="text" id="inDescricao-negocio" placeholder="Escreva uma pequena descrição do seu negócio"></label>
+                    <label for="inRedesSociais"><input type="text" id="inRedesSociais" placeholder="Digite as suas principais redes socias"></label>
+                </fieldset>
+                <fieldset class="dados-bancarios"><legend>Dados bancárias</legend>
+                <label for="inNomeDoBanco"><input type="text" id="inNomeDoBanco" placeholder="Digite o nome do seu banco"></label>
+                <label for="sem-agencia"><input type="radio" id="sem-agencia" name="confirmaAgencia">Possui informação da agência</label>
+                <label for="inAgencia"><input type="text" id="inNomeDoBanco" placeholder="Digite o nome do seu banco"></label>
+                <label for="inDigito"><input type="text" id="inDigito" placeholder="Digito"></label>
+                <label for="inNumero-conta"><input type="text" id="inNumero-conta" placeholder="Número da conta"></label>
+                <label for="inChavePIX"><input type="text" id="inChavePix" placeholder="Digite sua chave PIX"></label>
+                </fieldset>
+                <fieldset><legend>Comprovante anti-fraude</legend>
+                    <!--PARA FINSs DE SEGURANÇA, NÃO USAR INFORMAÇÕES REAIS-->
+                <label for="inFoto-documentos"><input type="file" id="inFoto-documentos"><strong>Foto do RG/CNH</strong></label>
+                <label for="inComprovante-residencia"><input type="file" id="inComprovante-residencia"><strong>Comprovante de residência</strong></label>
+                <h3>3 fotos do local</h3>
+                <label for="inFoto-local"><input type="file" id="inFoto-local-1"></label>
+                <label for="inFoto-local"><input type="file" id="inFoto-local-2"></label>
+                <label for="inFoto-local"><input type="file" id="inFoto-local-3"></label>
+                </fieldset>
+                <input type="submit" value="Enviar informações">
+                <a href="../Cadastro/Cadastro.html">Voltar</a>
+            </form> 
+        </main>
+    </body>
+</html>
