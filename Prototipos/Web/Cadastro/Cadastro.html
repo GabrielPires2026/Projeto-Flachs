@@ -16,7 +16,7 @@
             <section class="section-form-content">
                 <h1>Cadastre-se aqui:  </h1>
                 <form action="#" method="post">
-                    <fieldset> <legend>Informações pessoais</legend>
+                    <fieldset class="informacoes-pessoais"> <legend>Informações pessoais</legend>
 
                         <label for="inNome"> Digite seu nome:
                         <input type="text" id="inNome" name="nome" required>
@@ -26,15 +26,15 @@
                         <input type="email" id="inEmail" name="e-mail" placeholder="Ex: nomeDoEmail@gmail.com" required>
                     </label>
 
-                    <label for="inCpf">
-                        <input type="text" id="inCpf" name="cpf" required>
+                    <label for="inCpf"> Digite seu CPF:
+                        <input type="text" id="inCpf" name="cpf" max="11"  required>
                     </label>
 
-                    <label for="inSenha">
+                    <label for="inSenha"> Digite uma senha forte: 
                         <input type="password" id="inSenha" name="senha" required>
                     </label>
 
-                    <label for="inConfirmaSenha">
+                    <label for="inConfirmaSenha"> Confirme sua senha:
                         <input type="password" id="inConfirmarSenha" name="confirmarSenha" required>
                     </label>
 
@@ -43,7 +43,7 @@
 
                     </fieldset>
 
-                    <fieldset> <legend>Localização: </legend>
+                    <fieldset class="informacoes-local"> <legend>Localização: </legend>
                         <h2>Região:</h2>
                         <label for="inEstado"> Digite o estado 
                             <input type="text" id="inEstado" name="estado" required>
@@ -80,7 +80,7 @@
 
                     </fieldset>
 
-                    <fieldset><legend>Forma de cadástro</legend>
+                    <fieldset class="forma-cadastro"><legend>Forma de cadástro</legend>
                     
                     <h2>Como você deseja se cadastrar?</h2>
 
