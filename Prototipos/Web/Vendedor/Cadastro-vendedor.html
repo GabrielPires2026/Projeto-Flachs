@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--TAG QUE DEVERÁ SER MODIFICADA CONFORME MODIFICAÇÕES NO ARQUIVO-->
+        <meta name="author" content="Gabriel Pires">
+        <meta name="description" content="Página de cadastro de vendedor">
+        <title>Cadastro de Vendedor - Projeto FLACHS</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cadastro de Vendedor</h1>
+
+        </header
+        <main>
+            <section class="container-form-cadastro">
+                <form action="#" method="post" class="form-cadastro-vendedor">
+                    <fieldset class="informacoes-servico"><legend>Informações do serviço: </legend>
+                    <label for="inNomeServico">Digite o nome do serviço <input type="text" id="inNomeServico" placeholder="Ex: Padsaria do seu João" required ></label>
+                    <label for="inDescricaoServico">Digite a descrição do serviço <input type="text" id="inDescricaoServico" placeholder="Ex: Serviço de padaria" required ></label>
+                    <label for="inHorario-funcionamento">Digite o horário de funcionamento <input type="time" id="inHorario-funcionamento" placeholder="Das 07:30 as 12:00" required ></label>
+                    <label for="inCategoria-servico">
+                        <select name="inCategoria-servico" id="inCategoria-servico"> Selecione a categoria do serviço:
+                            <option>Vendedor ambulante (informal)</option>
+                            <option>Vendedor ambulante (formal)</option>
+                            <option>Vendedor CLT (trabalha em loja)</option>
+                            <option>Dono de estabelecimentos informais (barracas em feiras, barracas de praia, mercearias, entre outros)</option>
+                        </select>
+                        <label for="inZona-atuacao">
+                            <select>Escolha um local de atuação
+                                <option>Periferia</option>
+                                <option>Centro Urbano</option>
+                                <option>Periferia e centro urbano</option>
+                            </select>
+                    </label>
+                    <label for="sem-endereco"><input type="radio" id="sem-endereco">Você tem um local de atuação fixo?</label>
+                <label for="inLocal-servico"><input type="text" id="inLocal-servico" placeholder="EX: Rua das Macieiras, numero: X...">Digite o endereço de onde você atua... </label>
+                    </fieldset>
+                    <fieldset class="informacoes-financeiras"><legende>Informações financeiras</legende>
+                        <label for="inNomeDoBanco"><input type="text" id="inNomeDoBanco" placeholder="Digite o nome do seu banco"></label>
+                        <label for="sem-agencia"><input type="radio" id="sem-agencia" name="confirmaAgencia">Possui informação da agência</label>
+                        <label for="inAgencia"><input type="text" id="inNomeDoBanco" placeholder="Digite o nome do seu banco"></label>
+                        <label for="inDigito"><input type="text" id="inDigito" placeholder="Digito"></label>
+                        <label for="inNumero-conta"><input type="text" id="inNumero-conta" placeholder="Número da conta"></label>
+                        <label for="inChavePIX"><input type="text" id="inChavePix" placeholder="Digite sua chave PIX"></label>
+                    </fieldset>
+                    <input type="submit" value="Enviar informações" id="btnEnviar">
+                    <a href="../Cadastro/Cadastro.html">
+                        <img src="#">
+                    </a>
+                </form>
+            </section>
+        </main>
+            
+        
+    </body>
+</html>
