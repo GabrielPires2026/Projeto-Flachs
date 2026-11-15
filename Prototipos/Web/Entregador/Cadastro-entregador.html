@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--TAG QUE DEVERÁ SER MODIFICADA CONFORME ALTERAÇÕES NO CÓDIGO-->
+        <meta name="author" content="Gabriel Pires">
+        <meta name="description" content="Pagina de cadastro, se o perfil for entregador">
+        <title>Cadastro do entregdor - Projeto FLACHS</title>
+    </head>
+    <body>
+        <header>
+            <a href="../Cadastro/Cadastro.html">
+                <img src="#">
+            </a>
+        </header>
+        <main>
+            <form action="#" method="POST">
+                <fieldset class="Informacoes-areaAtuaca-veiculo"><legend>Informações do Veículo e área de atuação</legend>
+                <label for="inVeiculo">
+                    <select id="inVeiculo">Qual o seu meio de transporte
+                        <option>Moto</option>
+                        <option>Carro</option>
+                        <option>Bicicleta</option>
+                        <option>Outros</option>
+                        <option>Não possui</option>
+                    </select>
+                </label>
+                <label for="inArea-atuacao">
+                    <fieldset id="inArea-atuacao">
+                        <option>Exclusivo no meu bairro</option>
+                        <option>Preferência pelo meu bairro (Aceita pedidos de outros locais, mas prioriza o seu bairro)</option>
+                        <option>Cidade toda</option>
+                    </fieldset>
+                </label>
+                </fieldset>
+                <fieldset class="documentacao"><legend>Documentação necessária</legend>
+                    <label for="inFoto-documentos"><input type="file" id="inFoto-documentos"><strong>Foto do RG/CNH</strong></label>
+                    <label for="inComprovante-residencia"><input type="file" id="inComprovante-residencia"><strong>Comprovante de residência</strong></label>
+                </fieldset>
+                <fieldset class="dados-bancarios"><legend>Dados bancárias</legend>
+                    <label for="inNomeDoBanco"><input type="text" id="inNomeDoBanco" placeholder="Digite o nome do seu banco"></label>
+                    <label for="sem-agencia"><input type="radio" id="sem-agencia" name="confirmaAgencia">Possui informação da agência</label>
+                    <label for="inAgencia"><input type="text" id="inNomeDoBanco" placeholder="Digite o nome do seu banco"></label>
+                    <label for="inDigito"><input type="text" id="inDigito" placeholder="Digito"></label>
+                    <label for="inNumero-conta"><input type="text" id="inNumero-conta" placeholder="Número da conta"></label>
+                    <label for="inChavePIX"><input type="text" id="inChavePix" placeholder="Digite sua chave PIX"></label>
+                    </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
