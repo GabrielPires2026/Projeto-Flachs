@@ -1,1 +1,74 @@
-/* Estilos para o fluxo de Cadastro - Projeto FLACHS */
+/* Corrigido por IA */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+section {
+    width: 100%;
+    max-width: 600px; /* Evita que o formulário fique esticado demais na tela */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5em;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.5em;
+    border: 1px solid darkgray;
+    border-radius: 8px;
+}
+
+legend {
+    color: darkgray;
+    padding: 0 0.5em;
+    font-weight: bold;
+}
+
+label {
+    color: darkgray;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.4em;
+    margin-top: 0.8em;
+}
+
+input {
+    width: 100%;
+    padding: 0.6em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
