@@ -15,10 +15,10 @@ const semNumero = document.getElementById("inSN").checked;
 const numeroDaCasa = document.getElementById("inNumero");
 const complemento = document.getElementById("inComplemento");
 //Variáveis que irão guardar os valores das formas de cadastro
-const cliente = document.getElementById("inCliente").ariaChecked;
-const entregador = document.getElementById("inEntregador");
-const empresario = document.getElementById("inEmpresario");
-const vendedor = document.getElementById("inVendedor");
+const cliente = document.getElementById("inCliente").checked;
+const entregador = document.getElementById("inEntregador").checked;
+const empresario = document.getElementById("inEmpresario").checked;
+const vendedor = document.getElementById("inVendedor").checked;
 //Variável que guardam o valor do botão
 const btnEnviar = document.getElementById("btnEnviar");
 
@@ -68,6 +68,21 @@ email.addEventListener("blur", (e) => {
         })
         
     }
+    if(valorEmail.includes("@gmail.com")){
+        console.log("Email V[alido");
+    }else if(!valorEmail.includes("@gmail.com")){
+        console.error("Email inválido");
+        novoParagrafo.textContent = "O e-mail digitado não é válido! Por favor, preencha o campo com um e-mail válido"
+        novoParagrafo.style.color = "red";
+        email.style.borderColor = "red";
+        email.before(novoParagrafo);
+
+        email.addEventListener("input", () => {
+            erro.textContent = "";
+            erro.remove();
+            email.style.borderColor = "black";
+        })
+    }
 
 })
 
@@ -92,6 +107,7 @@ cpf.addEventListener("blur", (e) => {
         })
         
     }
+    
 
 })
 
@@ -287,3 +303,38 @@ if(!semNumero){
     })
 }
 
+btnEnviar.addEventListener("click", (e) => {
+    const valorNome = nome.value;
+    const valorEmail =  email.value;
+    const valorCpf = cpf.value;
+    const valorSenha = senha.value;
+    const valorConfirmador = confirmaSenha.value;
+    const valorEstado = estado.value;
+    const valorCidade = cidade.value;
+    const valorBairro = bairro.value;
+    const valorRua = rua.value;
+    if(
+        valorNome !== "" &&
+        valorEmail !== "" &&
+        valorCpf !== "" &&
+        valorSenha !== "" &&
+        valorConfirmador !== "" &&
+        valorEstado !== "" &&
+        valorCidade !== "" &&
+        valorBairro !== "" &&
+        valorRua !== "" 
+    ){
+        if(cliente){
+            window.location.href = "../Cliente/Cadastro-cliente.html";
+        }
+        if(empresario){
+            window.location.href = "../Empresario/Cadastro-empresario.html";
+        }
+        if(entregador){
+            window.location.href = "../Entregador/Cadastro-entregador.html";
+        }
+        if(vendedor){
+            window.location.href = "../Vendedor/Cadastro-vendedor.html"
+        }
+    }
+})
