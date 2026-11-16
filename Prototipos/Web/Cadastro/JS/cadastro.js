@@ -5,7 +5,7 @@ const nome = document.getElementById("inNome");
 const email = document.getElementById("inEmail");
 const cpf = document.getElementById("inCpf");
 const senha = document.getElementById("inSenha");
-const confirmaSenha = document.getElementById("inConfirmaSenha");
+const confirmaSenha = document.getElementById("inConfirmarSenha");
 //Variáveis que irão guardar as informações de localização dos usuários
 const estado = document.getElementById("inEstado");
 const cidade = document.getElementById("inCidade");
