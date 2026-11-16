@@ -1,0 +1,39 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+        <!--TAG QUE DEVERÁ SER ALTERADA CONFORME MODIFICAÇÕES NO CÓDIGO-->
+        <meta name="author" content="Gabriel Pires">
+        <meta name="description" content="Pagina de cadastro dos clientes">
+        <title>Cadastro dos clientes - Projeto FLACHS</title>
+        <link type="text/css" rel="stylesheet"  href="CSS/Cadastro-cliente.css">
+    </head>
+    <body>
+        <heaeder>
+            <a href="../Cadastro/Cadastro.html">
+                <img src="#">
+            </a>
+        </heaeder>
+        <main>
+            <header class="header-cadastro">
+                <h1>Pagina de cadastro dos ckientes.</h1>
+            </header>
+            <section class="section-container-form-cadastro-cliente">
+                <form action="#" method="POST" class="form-cadastro-cliente">
+                    <fieldset class="cadastro-informacoes-bancarias"><legend>Informações bancárias</legend>
+                    <label for="inNome-banco"><input type="text" id="inNome-banco" placeholder="Bradesco"> Por favor, digite o nome do seu banco</label>
+                    <label for="Sem-agencia"><input type="radio" id="Sem-agencia" > Você sabe  a agência do seu banco?</label>
+                    <label for="inAgencia"><input type="text" id="inAgencia" placeholder="Digite o nome da  agência do seu banco"></label>
+                    <label for="inNumero-conta"><input type="text" id="inNumero-conta" placeholder="Número da conta"></label>
+                    <label for="inDigito"><input type="text" id="inDigito" placeholder="Digito"></label>
+                    <label for="inChavePIX"><input type="text" id="inChavePix" placeholder="Digite sua chave PIX"></label>
+                    </fieldset>
+                    <input type="submit" value="Enviar Informações" id="btnEnviar">
+                </form>
+
+            </section>
+            
+        </main>
+        <script type="text/js" src="JS/Cadastro-cliente.js"></script>
+    </body>
+</html>
