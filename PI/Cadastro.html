@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--TAG QUE DEVERÁ SER ALTERADA CONFORME MODIFICAÇÕES NO ARQUIVO-->
+        <meta name="author" content="Gabriel Pires">
+        <meta name="description" content="Pagina index.html para apresentacao">
+        <title>Projeto FLACHS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <aside>
+            <a href="#" id="op1"></a>
+            <a href="#" id="op2"></a>
+            <a href="#" id="op4"></a>
+            <a href="#" id="op4"></a>
+        </aside>
+        <header class="caecalho-principal">
+            <a href="#">
+                <img src="#">
+            </a>
+        </header>
+        <main class="main-container">
+            <header>
+                <h1>Seja bem vindo ao projeto FLACHS</h1>
+            </header>
+            <section class="form-cadastro-content">
+                <H2>Seja um membro!</H2>
+                <form method="post">
+                    <fieldset class="info-pessoal">
+                        <legend>Informações pessoais</legend>
+                        <label for="inNome">Dgite o seu nome:
+                        <input type="text" id="inNome" name="nome" required>
+                        </label>
+                        <label for="inEmail"><input type="email" id="inEmail" name="E-mail" required>Dgite o seu email </label>
+                        <label for="inCpf"><input type="text" id="inCpf" name="cpf" required>Dgite o seu cpf </label>
+                        <label for="inSenha"><input type="password" id="inSenha" name="senha" required></label>
+                        <label for="inConfirmaSenha"><input type="password" id="inConfirmaSenha" name="senha" required></label>
+                    </fieldset>
+                    <fieldset class="opcao-profissao">
+                        <legend>Escolha um tipo de usuário: </legend>
+                        <label for="inCliente"><input type="radio" id="inCliente" name="usuario">Cliente (usuário qualquer) </label>
+                        <label for="inEmpresario"><input type="radio" id="inEmpresario" name="usuario">Empresário (microeempreendedor, dono de lojas, fornecedor de serviços ou dono de grandes empresas)</label>
+                        <label for="inEntregador"><input type="radio" id="inEntregador" name="usuario">Entregadores</label>
+                    </fieldset>
+                </form>
+            </section>
+            <footer>
+
+            </footer>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>

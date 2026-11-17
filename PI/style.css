@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    max-width: 1000px;
+}
+body{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13;
+    max-height: 2500px;
+}
+h1, h2{
+    color: yellow;
+}
+h1{
+    text-align: center;
+}
+
+form{
+    height: 1450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 13;
+}
+fieldset{
+    color: darkgray;
+    height: 300px;
+    max-height: 800px;
+    padding: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15;
+}
+label, input{
+    height: 25px;
+    padding: .2em;
+    margin: 12px;
+    width: 450px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    gap: 15;
+    row-gap: 15;
+}
+input{
+    color: white;
+}
+.form-cadastro-content{
+    padding: 20px;
+    max-height: 1500px;
+    width: 100%;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#inNome{
+    background-color: #515151;
+    border-radius: 12px ;
+}
+#inEmail{
+    background-color: #515151;
+    border-radius: 12px ;
+}
+#inCpf{
+    background-color: #515151;
+    border-radius: 12px ;
+}
+#inSenha{
+    background-color: #515151;
+    border-radius: 12px ;
+}
+#inConfirmaSenha{
+    background-color: #515151;
+    border-radius: 12px ;
+}
+.opcao-proffisao{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: static;
+    
+}
+.radio-content{
+    position:relative;
+    bottom: 14px ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+}
+ #inCliente{
+    position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+
+}
+#inEmpresario{
+    position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+}
+#inEntregador{
+     position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+
+}
+.opcao-veiculo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: static;
+    height: 480px;
+    padding-top: 12px;
+}
+#inBicicleta{
+     position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+}
+#inMoto{
+     position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+}
+#inCarro{
+     position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+}
+#inOutroVeiculo{
+     position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+}
+#inNaoPossuiVeiculo{
+     position: relative;
+    right: 360px ;
+    top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start ;
+    text-align: start;
+}
+#btnEnviar{
+    border-radius: 12px;
+    background-color: #515151;
+    transition: background .5s ease-out;
+}
+#btnResetar{
+    border-radius: 12px;
+    background-color: #515151;
+    transition: background .5s ease-out;
+}
+#btnEnviar:hover{
+    background-color: #717171 ;
+}
+#btnResetar:hover{
+    background-color: #717171;
+}
+.icone-seta-content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;    
+    text-decoration: none;
+    color: white;
+    position: relative;
+    right: 355px;
+    top: 10px;
+}
+.icone-seta{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 30px;
+    opacity: 1;
+    position: relative;
+}
+
