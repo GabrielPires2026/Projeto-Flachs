@@ -16,10 +16,15 @@
             <a href="#" id="op4"></a>
             <a href="#" id="op4"></a>
         </aside>
-        <header class="caecalho-principal">
-            <a href="#">
-                <img src="#">
-            </a>
+        <header class="header-nav-content">
+            <nav class="nav-sair">
+                <a href="#" class="icone-seta-content">
+                    
+                <img src="icone-seta-retorno.svg" class="icnone-seta"> voltar 
+
+                </a>
+             
+            </nav>
         </header>
         <main class="main-container">
             <header>
@@ -33,17 +38,33 @@
                         <label for="inNome">Dgite o seu nome:
                         <input type="text" id="inNome" name="nome" required>
                         </label>
-                        <label for="inEmail"><input type="email" id="inEmail" name="E-mail" required>Dgite o seu email </label>
-                        <label for="inCpf"><input type="text" id="inCpf" name="cpf" required>Dgite o seu cpf </label>
-                        <label for="inSenha"><input type="password" id="inSenha" name="senha" required></label>
-                        <label for="inConfirmaSenha"><input type="password" id="inConfirmaSenha" name="senha" required></label>
+                        <label for="inEmail">Dgite o seu email 
+                            <input type="email" id="inEmail" name="E-mail" required>
+                        </label>
+                        <label for="inCpf">Dgite o seu cpf
+                            <input type="text" id="inCpf" name="cpf" required> 
+                        </label>
+                        <label for="inSenha"> Digite uma senha forte
+                            <input type="password" id="inSenha" name="senha" required>
+                        </label>
+                        <label for="inConfirmaSenha">Confirme a sua senha:
+                            <input type="password" id="inConfirmaSenha" name="senha" required>
+                        </label>
                     </fieldset>
-                    <fieldset class="opcao-profissao">
-                        <legend>Escolha um tipo de usuário: </legend>
-                        <label for="inCliente"><input type="radio" id="inCliente" name="usuario">Cliente (usuário qualquer) </label>
-                        <label for="inEmpresario"><input type="radio" id="inEmpresario" name="usuario">Empresário (microeempreendedor, dono de lojas, fornecedor de serviços ou dono de grandes empresas)</label>
-                        <label for="inEntregador"><input type="radio" id="inEntregador" name="usuario">Entregadores</label>
+                    <fieldset class="opcao-profissao"> <legend>Escolha um tipo de usuário: </legend>
+                        <label class="radio-content"  for="inCliente"><input type="radio" id="inCliente" name="usuario">Cliente (usuário qualquer) </label>
+                        <label class="radio-content" for="inEmpresario"><input type="radio" id="inEmpresario" name="usuario">Empresário (microeempreendedor, dono de lojas, fornecedor de serviços ou dono de grandes empresas)</label>
+                        <label class="radio-content" for="inEntregador"><input type="radio" id="inEntregador" name="usuario">Entregadores</label>
                     </fieldset>
+                    <fieldset class="opcao-veiculo"> <legend>Qual o seu meio de transporte?</legend>
+                        <label class="radio-content" for="inBicicleta"><input type="radio" id="inBicicleta" name="veiculo">Bicicleta</label>
+                        <label class="radio-content" for="inMoto"><input type="radio" id="inMoto" name="veiculo">Moto</label>
+                        <label class="radio-content" for="inCarro"><input type="radio" id="inCarro" name="veiculo">Carro</label>
+                        <label class="radio-content" for="inOutroVeiculo"><input type="radio" id="inOutroVeiculo" name="veiculo">Outros tipos de veículo</label>
+                        <label class="radio-content" for="inNaoPossuiVeiculo"><input type="radio" id="inNaoPossuiVeiculo" name="veiculo">Não possui veículo</label>
+                    </fieldset>
+                    <input type="submit" id="btnEnviar" name="botao-enviar" value="Enviar informacoes">
+                    <input type="reset" id="btnResetar" name="botao-resetar" value="ReccaregarPagina">
                 </form>
             </section>
             <footer>
