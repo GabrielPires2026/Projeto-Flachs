@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tag que deverá ser alterada conforme modificações no arquivo-->
+    <meta name="author" content="Gabriel Pires">
+    <meta name="description" content="Pagina do cliente (usuario qualquer)">
+    <title>Pagina do cliente - Projeto FLACHS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-sair">
+            <a href="Pagina-principal.html" class="icone-seta-content">
+            <img src="icone-seta-retorno.svg" class="icnone-seta">Voltar
+        </a>
+        </nav>
+    </header>
+    <main class="main-container">
+        <div class="pagina-principal">
+            <header class="header-pagina-principal">
+                <h1>Menu de opções</h1>
+            </header>
+            <section class="section-menu-opcoes">
+            <button class="dir-perfil">Meu perfil</button>
+            <button class="chat">Meus chats</button>
+            <button class="config-financeira">Alterar minhas informacoes financeiras</button>
+            <button class="config">Mais configurções</button>
+            </section>
+            <section class="section-post-pedidos">
+                <article class="post-pedidos">
+                    <header class="header-post-pedidos">
+                        <h1>PIZZARIA E ESFIHA MALLU</h1>
+                    </header>
+                    <span class="pedido">1 Esfiha de carme. 1 Coca-Cola Lata</span>
+                    <span class="preco-pedido">R$12,30</span>
+                    <footer class="footer-opcoes-pedido">
+                    <button class="chat-entregador">Chat com o entregador</button>
+                    <button class="cancela-pedido">Cancelar pedido</button>
+                    </footer>
+                </article>
+                <h2>Pedidos anteriores</h2>
+                <hr>
+                <article class="post-pedidos">
+                    <header class="header-post-pedidos">
+                        <h1>HOUSE BURGUER 190</h1>
+                    </header>
+                    <span class="pedido">1 X-Salada. 1 Suco Lata</span>
+                    <span class="preco-pedido">R$25,50</span>
+                    <footer class="footer-opcoes-pedido">
+                        <button class="chat-entregador">Chat com o entregador</button>
+                        <button class="cancela-pedido">Cancelar pedido</button>
+                    </footer>
+                </article>
+            </section>
+        </div>
+
+        <div class="pagina-perfil">
+            <header>
+                <a>Voltar à página principal</a>
+            </header>
+            <section class="section-info-perfil">
+                <header class="header-info-perfil">
+                    <h1>Perfil do cliente</h1>
+                    <img src="">
+                </header>
+                <article class="article-info-perfil">
+                    <header class="info-biografia">
+                        <h2>Biografia</h2>
+                        <p class="Biografia"></p>
+                        <h2>Redes sociais</h2>
+                        <p class="redes-sociais"></p>
+                    </header>
+                    <span class="info-financeira">
+                        <h2>Informacções financeiras</h2>
+                    </span>
+                    <span class="info-saldo">
+                        <h3>Saldo atual</h3>
+                        <p>R$ 135,90</p>
+                    </span>
+                    <span class="info-banco">
+                        <h3>Chave pix</h3>
+                        <p>(73)98197-0054</p>
+                    </span>
+                    <button class="config-alteracao">Alterar perfil</button>
+                </article>
+            </section>
+        </div>
+
+        <div class="pagina-chat">
+            <header>
+                <a>Voltar à página principal</a>
+            </header>
+             <aside class="chat-menu-content">
+                    <nav class="chat-menu">
+                        <span class="opcao-msg-content">
+                            <img href=""> 
+                            <h3>PIZZARIA E ESFIHA MALLU</h3>
+                        </span>
+                        <span class="opcao-msg-content">
+                            <img href=""> 
+                            <h3>HOUSE BURGUER 190</h3>
+                        </span>
+                        <span class="opcao-msg-content">
+                            <img href=""> 
+                            <h3>Davi (entregador)</h3>
+                        </span>
+                        <span class="opcao-msg-content">
+                            <img href=""> 
+                            <h3>David (entregador)</h3>
+                        </span>
+                    </nav>
+                </aside>
+            <section class="section-chat">
+               <header class="header-chat">
+                <img src="#">
+                <h3 class="nome-perfil"></h3>
+               </header>
+               <div class="tela-msg">
+                <p class="paragrafo-msg"></p>
+               </div>
+               <footer>
+                <input type="text" id="msg-input" name="msg">
+                <input type="submit" id="msg-submit" name="msg" value="Enviar mensagem">
+               </footer>
+            </section>
+        </div>
+
+        <div class="pagina-config-financeira">
+             <header>
+                <a>Voltar à página principal</a>
+            </header>
+            <section class="section-info-financeiras">
+                <header class="header-info-financeiras">
+                    <h2>Saldo atual</h2>
+                    <p class="info-saldo">R$ 135,90</p>
+                    <h2>Banco</h2>
+                    <p class="info-banco">Bradesco</p>
+                    <h2>Agência</h2>
+                    <p class="info-agencia">XX.XX-X</p>
+                    <h2>Chave pix: </h2>
+                    <p class="info-pix">(73)98197-0054</p>
+                </header>
+                <footer class="footer-info-financeiras">
+                    <article class="post-historico-financeiro">
+                        <header class="header-historico-financeiro">
+                            <h1>Histórico financeiro</h1>
+                        </header>
+                        <span class="registro-financeiro">
+                            <h3>pedido</h3>
+                            <p>#0010</p>
+                            <h3>Estabelecimento</h3>
+                            <p>PIZZARIA E ESFIHA MALLU</p>
+                            <h3>Preço</h3>
+                            <p>R$12,30</p>
+                            <h3>Detalhe do pedido</h3>
+                            <p>1 Esfiha de carme. 1 Coca-Cola Lata</p>
+                            <h3>Status do pedido</h3>
+                            <p>Finalizado</p>
+                        </span>
+                        <span class="registro-financeiro">
+                            <h3>Pedido</h3>
+                            <p>#0010</p>
+                            <h3>Estabelecimento</h3>
+                            <p>HOUSE BURGUER 190<</p>
+                            <h3>Preço</h3>
+                            <p>R$25,50</p>
+                            <h3>Detalhe do pedido</h3>
+                            <p>1 X-Salada. 1 Suco Lata</p>
+                            <h3>Status do pedido</h3>
+                            <p>Finalizado</p>
+                        </span>
+                    </article>
+                </footer>
+            </section>
+            <section class="section-config-financeiras">
+                <header  class="header-config-financeiras">
+                    <h1>Configurações das informações financeiras</h1>
+                </header>
+                <h1>Configurações do banco</h1>
+                    <label for="inNovoBanco"><input type="text" id="inNovoBanco" placeholder="digite o nome do seu banco aqui!">Novo Banco</label>
+                    <label for="inNumeroAgencia"><input type="text" id="inNumeroAgencia" placeholder="digite o número da agência aqui!">Numero da agência </label>
+                    <label for="inChavePix"><input type="text" id="inChavePix" placeholder="digite a sua chave PIX aqui!">Chave PIX </label>
+                    <button class="addBanco" type="submit">Adicionar novo banco</button>
+                <h1>Depósito de valores</h1>
+                <label for="inBancoDeposito"><input type="text" id="inBancoDeposito" placeholder="Digite o seu banco"></label>
+                <label for="inValorDeposito"><input type="text" id="inValorDeposito" placeholder="Digite o valor a ser depositado"></label>
+                <button type="submit">Depositar valor</button>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>
