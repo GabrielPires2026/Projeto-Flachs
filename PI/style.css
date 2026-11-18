@@ -15,6 +15,7 @@ body{
     align-items: center;
     gap: 13;
     max-height: 2500px;
+    color: grey;
 }
 h1, h2{
     color: yellow;

@@ -1,182 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--TAG QUE DEVERÁ SER ALTERADA CONFORME MODIFICAÇÕES NO ARQUIVO-->
+    <!--TAGS QUE DEVERÃO SER ALTERADAS MEDIANTE MODIFICASÇÕES NO CÓDIGO-->
     <meta name="author" content="Gabriel Pires">
-    <meta name="description" content="Pagina do empresario">
-    <title>Página do empresário - ProjetoFLACHS</title>
+    <meta name="description" content="Pagina dos empresarios">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header-nav-content">
         <nav class="nav-sair">
             <a href="Pagina-principal.html" class="icone-seta-content">
-                <img src="icone-seta-retorno.svg" class="icnone-seta"> Voltar
-            </a>
+            <img class="icone-seta-retorno" src="icone-seta-retorno.svg">
+        </a>
         </nav>
     </header>
     <main class="main-container">
-        <div class="Pagina-principal">
-            <header class="header-pagina-empresario">
-                <h1>Página do empresário</h1>
-            </header>
-        <section class="section-menu-opcoes">
-            <h2>menu de opções</h2>
-            <button class="dir-perfil">Meu perfiç</button>
-            <button class="dir-empresa">Minha empresa</button>
-            <button class="dir-contratacoes">Entregadores contratados</button>
-            <button class="dir-chat">Meus chats</button>
-            <button class="config-financeira">Alterar  informações financeiras</button>
-            <button class="config">Outras configurações</button>
-        </section>
-        <section class="section-post-pedidos">
+        <h1 class="tittle-pagina-empresario">Página do empresário</h1>
+        <aside class="aside-perfil-empresario">
+            <h2 class="tittle-perfil-empresario">Perfil do empresario</h2>
+            <p class="nome-empresario"></p>
+            <img src="#">
+            <h2 class="tittle-cnpj">CNPJ</h2>
+            <span class="text-cnpj"></span>
+             <h2 class="tittle-bio">Biografia</h2>
+            <span class="texto-biografia"></span>
+            
+            <nav class="nav-perfil-principal">
+               <button class="btn-saldo">Acessar meu saldo</button>
+               <span class="info-saldo" style="display: none;"></span>
+                <button class="btn-saldo-empresa">Acessar saldo da empresa</button>
+                <span class="innfo-saldo-empresa" style="display:none;"></span>
+                <button class="btn-config-perfil">Alterar perfil</button>
+                <dialog class="modal-config-perfil">
+                    <h2 class="tittle-config-perfil">Configurações do perfil</h2>
+                    <input type="file" id="inFoto-perfil"> Escolha uma nova foto de perfil!
+                    <input type="text" id="inNome-usuario" placeholder="escreva um nome de usuario"> 
+                    <input type="text" id="inBiografia" placeholder="escreva uma Biografia">
+                    <input type="submit" id="btnEnviar-informacoes-perfil" value="Enviar informações">
+                </dialog>
+            </nav>
+        </aside>
+        <section class="sectiom-post-produtos">
             <article class="post-pedidos">
-                    <h2>Pedido atual</h2>
-                    <header class="header-post-pedidos">
-                        <h2>1 X-Calabresa, 1 Guaraná Lata </h2>
-                    </header>
-                    <span class="preco-pedido">R$12,30</span>
-                    <span class="taxa-retida">Táxa retida (FLACHS): 5% - R$ 6,15</span>
-                    <span class="status">
-                        <h3>Status do pedido: </h3>
-                        <p>Em andamento</p>
-                    </span>
-                    <footer class="footer-opcoes-pedido">
-                    <button class="chat-entregador">Chat com o entregador</button>
-                    <button class="cancela-pedido">Cancelar pedido</button>
-                    </footer>
-                </article>
-                <h2>Pedidos anteriores</h2>
-                <hr>
-                <article class="post-pedidos">
-                    <header class="header-post-pedidos">
-                        <h1>1 Combo familia</h1>
-                    </header>
-                    <span class="preco-pedido">R$45,00</span>
-                     <span class="taxa-retida">Táxa retida (FLACHS): 5% - R$ 2,25 </span>
-                    <span class="status">
-                        <h3>Status do pedido: </h3>
-                        <p>Concluído</p>
-                    </span>
-                    <footer class="footer-opcoes-pedido">
-                        <button class="chat-entregador">Chat com o entregador</button>
-                        <button class="cancela-pedido">Cancelar pedido</button>
-                    </footer>
-                </article>
-        </section>
-        <section class="section-post-produtos">
-            <article class="post-produtos">
-                <header class="header-post-produtos">
-                    <h2>Meus produtos</h2>
-                </header>
-                <footer class="footer-post-produtos">
-                    <span class="produto-content">
-                        <h1>X-Calabresa</h1>
-                        <p class="preco-produto">R$ 12,30</p>
-                    </span>
-                    <span class="produto-content">
-                        <h1>X-salada</h1>
-                        <p class="preco-produto">R$ 12,30</p>
-                    </span>
-                    <span class="produto-content">
-                        <h1>Frango empanado/Batatas fritss</h1>
-                        <p class="preco-produto">R$ 30,00</p>
-                    </span>
-                    <span class="produto-content">
-                        <h1>Combo famílha</h1>
-                        <p class="preco-produto">R$ 45,00</p>
-                    </span>
-                    <span class="produto-content">
-                        <h1>Limonada</h1>
-                        <p class="preco-produto">R$ 5,20</p>
-                    </span>
-                    <button class="config-novo-produto">Adicionar novo produto</button>
-                    <button class="config-excluir-produto">Excluir um produto</button>
-                </footer>
+                <h2>pedido atual</h2>
             </article>
         </section>
-        </div>
-
-        <div class="pagina-perfil">
-            <header>
-                <a>Voltar à página principal</a>
-            </header>
-            <section class="section-info-perfil">
-                <header class="header-info-perfil">
-                    <h1>Perfil do empresário</h1>
-                    <h3>CNPJ da empresa - 34.051.578/0001-99</h3>
-                    <img src="">
-                </header>
-                <article class="article-info-perfil">
-                    <header class="info-biografia">
-                        <h2>Biografia</h2>
-                        <p class="Biografia"></p>
-                        <h2>Redes sociais</h2>
-                        <p class="redes-sociais"></p>
-                    </header>
-                    <span class="info-financeira">
-                        <h2>Informacções financeiras</h2>
-                    </span>
-                    <span class="info-saldo">
-                        <h3>Saldo atual</h3>
-                        <p>R$ 3000,90</p>
-                    </span>
-                    <span class="info-saldo-empresa">
-                        <h3>Saldo atual da empresa</h3>
-                        <p>R$ 10.000,25</p>
-                    </span>
-                    <span class="info-banco">
-                        <h3>Chave pix</h3>
-                        <p>(11)99900-4531</p>
-                    </span>
-                    
-                    <button class="config-alteracao">Alterar perfil</button>
-                </article>
-            </section>
-            <section class="section-post-perfil">
-                <header class="header-post-perfil">
-                    <h1>Minhas postagens</h1>
-                </header>
-                <article class="article-post-produtos">
-                    <header class="header-post-produtos">
-                        <h2>Meus produtos</h2>
-                    </header>
-                      <footer class="footer-post-produtos">
-                        <span class="produto-content">
-                            <h1>X-Calabresa</h1>
-                            <p class="preco-produto">R$ 12,30</p>
-                        </span>
-                        <span class="produto-content">
-                            <h1>X-salada</h1>
-                            <p class="preco-produto">R$ 12,30</p>
-                        </span>
-                        <span class="produto-content">
-                            <h1>Frango empanado/Batatas fritss</h1>
-                            <p class="preco-produto">R$ 30,00</p>
-                        </span>
-                        <span class="produto-content">
-                            <h1>Combo famílha</h1>
-                            <p class="preco-produto">R$ 45,00</p>
-                        </span>
-                        <span class="produto-content">
-                            <h1>Limonada</h1>
-                            <p class="preco-produto">R$ 5,20</p>
-                        </span>
-                        <button class="config-novo-produto">Adicionar novo produto</button>
-                    </footer>
-                </article>
-                <article class="article-historico-financas">
-                    <header class="header-historico-financas">
-                        <h2>Minhas financas</h2>
-                    </header>
-                    <footer class="footer-historico-financas"></footer>
-                </article>
-            </section>
-        </div>
-        
     </main>
-    <script src="index.js" defer></script>
+
+
+
+
+
+
+    <script src="index.js"></script>
 </body>
 </html>
