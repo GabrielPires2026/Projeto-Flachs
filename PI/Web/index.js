@@ -98,3 +98,42 @@ const configuracaoFinanceira = {
     valorDeposito: document.getElementById("inValorDeposito"),
     btnEnviar: document.getElementById("btnEnviarConfig")
 }
+/*
+Variáveis respectivas ao perfil do empresário
+*/
+//Variáveis do perfil do empresário
+const perfilEmpresario = {
+    //Propriedades das informações básicas de perfil do empresário
+    nomeEmpresario: document.querySelector(".nome-empresario"),
+    imgPerfilEmpresario: document.querySelector(".img-perfil-empresario"),
+    cnpj: document.querySelector(".text-cnpj"),
+    biografia: document.querySelector(".text-biografia"),
+    //Propriedades responsáveis pela exibição de informaçções financeiras
+    btnSaldo: document.querySelector(".btn-saldo"),
+    saldo: document.querySelector(".info-saldo"),
+    btnSaldoEmpresa: document.querySelector(".btn-saldo-empresa"),
+    saldoEmporesa: document.querySelector(".info-saldo-empresa"),
+    btnFormaPagamento: document.querySelector(".btn-forma-pagamento"),
+    formaPagamento: document.querySelector(".forma-pagamento-atual")
+}
+//Propriedades das cofigurações de forma de pagamento
+const modalConfigFormasPagamento = {
+    btnConfigFormaPagamento: document.querySelector(".btn-config-forma-pagamento"),
+    modalConfigFormasPagamento: document.querySelector(".modal-config-formas-pagamento"),
+    frm: document.querySelector(".form-formas-pagamentos"),
+    adicionaFormaPagamento: document.querySelector(".inForma-pagamento"),
+    codigoFormaPagamento: document.querySelector(".inIdentificador-forma-pagamento"),
+    btnEnviarFormaPagamento: document.querySelector(".btnEnviar-forma-pagamento"),
+    btnCancelarOperacao: document.querySelector(".btnCancelar-forma-pagamento")
+}
+
+const modalConfigPerfil = {
+    btnConfigPerfil: document.querySelector(".btn-config-perfil"),
+    modalConfigPerfil: document.querySelector(".modal-config-perfil"),
+    frm: document.querySelector(".form-config-perfil"),
+    fotoPerfil: document.getElementById("inFoto-perfil"),
+    nomeUsuario: document.getElementById("inNome-usuario"),
+    biografiaUsuario: document.getElementById("inBiografia-usuario"), 
+    btnEnviar: document.getElementById("btnEnviar-informacoes-perfil"),
+    btnCancelar: document.getElementById("btnCancelar-modificacoes")
+}

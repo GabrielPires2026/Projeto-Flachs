@@ -24,43 +24,47 @@
         <aside class="aside-perfil-empresario">
             <h2 class="title-perfil-empresario">Perfil do empresario</h2>
             <p class="nome-empresario"></p>
-            <img src="#">
+            <img src="#" class="img-perfil-empresario">
             <h2 class="title-cnpj">CNPJ</h2>
             <span class="text-cnpj">13.191.680/0001-10</span>
             <h2 class="title-bio">Biografia</h2>
             <span class="texto-biografia"></span>
 
-            <nav class="nav-perfil-principal">
-                <button class="btn-saldo">Acessar meu saldo</button>
-                <span class="info-saldo" style="display: none;"></span>
-                <button class="btn-saldo-empresa">Acessar saldo da empresa</button>
-                <button class="btn-forma-pagamento">Ver forma de pagamento atual</button>
-                <span class="forma-pagamento-atual"></span>
-                <button class="btn-config-forma-pagamento">Alterar/adicionar forma de pagamento</button>
-                <dialog class="modal-config-forma-pagamento">
-                    <form method="dialog">
-                        <h3 class="title-config-pagamento">Configurações financeiras</h3>
-                    <h4 class="title-forma-pagamento">Adicionar forma de pagamento</h4>
-                    <input type="text" id="inForma-pagamento">
-                    <h4 class="title-indentificador-forma-pagamento">Digite o número/codigo aqui</h4>
-                    <input type="text" id="inIdentificador-forma-pagamento">
+           
+<nav class="nav-perfil-principal">
+    <button type="button" class="btn-saldo">Acessar meu saldo</button>
+    <span class="info-saldo" style="display: none;"></span>
+    <button type="button" class="btn-saldo-empresa">Acessar saldo da empresa</button>
+    <span class="info-saldo-empresa" style="display: none;"></span>
+    <button type="button" class="btn-formas-pagamento">Ver formas de pagamento atuais</button>
+    <span class="formas-pagamento-atual" style="display: none;"></span>
+    <button type="button" class="btn-config-formas-pagamento">Alterar/adicionar formas de pagamento</button>
+    <dialog class="modal-config-formas-pagamento">
+        <form method="dialog">
+             <span class="info-saldo-empresa" style="display: none;"></span>
+            <h3 class="title-config-pagamento">Configurações financeiras</h3>
+            <h4 class="title-formas-pagamento">Adicionar forma de pagamento</h4>
+            <input type="text" id="inForma-pagamento">
+            <h4 class="title-identificador-forma-pagamento"> Digite o número/código aqui</h4>
+            <input type="text" id="inIdentificador-forma-pagamento">
+            <input type="submit" id="btnEnviar-forma-pagamento" value="Enviar informações">
+            <button type="submit" id="btnCancelar-forma-pagamento"> Cancelar ação</button>
+        </form>
+    </dialog>
+    <button type="button" class="btn-config-perfil">Alterar perfil</button>
+    <dialog class="modal-config-perfil">
+        <form method="dialog" class="form-config-perfil">
+            <h2 class="title-config-perfil">Configurações do perfil</h2>
+            <input type="file" id="inFoto-perfil" accept="image/*" aria-label="Escolha uma nova foto de perfil">
+            <input type="text" id="inNome-usuario" placeholder="Escreva um nome de usuário">
+            <input type="text" id="inBiografia-usuario" placeholder="Escreva uma biografia">
+            <input type="submit" id="btnEnviar-informacoes-perfil"  value="Enviar informações">
+            <input type="button" id="btnCancelar-modificacoes" value="Cancelar modificações">
+        </form>
+    </dialog>
 
-                    <input type="submit" id="btnEnviar-forma-pagamento" value="Enviar informações">
-                    <input type="button" id="btnCancelar-forma-pagamento" value="Cancelar ação">
-                    </form>
-                </dialog>
-                <form method="dialog">
-                     <span class="info-saldo-empresa" style="display:none;"></span>
-                <button class="btn-config-perfil">Alterar perfil</button>
-                <dialog class="modal-config-perfil">
-                    <h2 class="title-config-perfil">Configurações do perfil</h2>
-                    <input type="file" id="inFoto-perfil"> Escolha uma nova foto de perfil!
-                    <input type="text" id="inNome-usuario" placeholder="escreva um nome de usuario">
-                    <input type="text" id="inBiografia" placeholder="escreva uma Biografia">
-                    <input type="submit" id="btnEnviar-informacoes-perfil" value="Enviar informações">
-                </form>
-                </dialog>
-            </nav>
+</nav>
+
         </aside>
         <section class="section-post-pedidos">
             <article class="post-pedido-atual">
