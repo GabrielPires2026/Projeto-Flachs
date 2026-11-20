@@ -58,9 +58,6 @@
         </div>
 
         <section class="section-perfil">
-            <header>
-                <a>Voltar à página principal</a>
-            </header>
             <section class="section-info-perfil">
                 <header class="header-info-perfil">
                     <h1>Perfil do cliente</h1>
@@ -73,58 +70,58 @@
                         <h2>Redes sociais</h2>
                         <p class="redes-sociais"></p>
                     </header>
-                    <span class="info-financeira">
-                        <h2>Informacções financeiras</h2>
-                    </span>
+                    <h2>Informações financeiras</h2>
+                     <h3>Saldo atual</h3>
                     <span class="info-saldo">
-                        <h3>Saldo atual</h3>
                         <p>R$ 135,90</p>
                     </span>
-                    <span class="info-banco">
-                        <h3>Chave pix</h3>
-                        <p>(73)98197-0054</p>
-                    </span>
+                    <h3 class="title-forma-pagamento">Chave pix</h3>
+                    <span class="info-forma-pagamentos">(73)98197-0054</span>
                     <button class="config-alteracao-perfil">Alterar perfil</button>
                 </article>
             </section>
         </section>
 
-        <section class="pagina-chat">
-            <header>
-                <a>Voltar à página principal</a>
-            </header>
+        <section class="section-chat">
              <aside class="chat-menu-content">
                     <nav class="chat-menu">
-                        <span class="opcao-msg-content">
+                        <div class="opcao-msg-content">
                             <img href=""> 
                             <h3>PIZZARIA E ESFIHA MALLU</h3>
-                        </span>
-                        <span class="opcao-msg-content">
+                        </div>
+                        <div class="opcao-msg-content">
                             <img href=""> 
                             <h3>HOUSE BURGUER 190</h3>
-                        </span>
-                        <span class="opcao-msg-content">
+                        </div>
+                        <div class="opcao-msg-content">
                             <img href=""> 
                             <h3>Davi (entregador)</h3>
-                        </span>
-                        <span class="opcao-msg-content">
+                        </div>
+                        <div class="opcao-msg-content">
                             <img href=""> 
                             <h3>David (entregador)</h3>
-                        </span>
+                        </div>
                     </nav>
                 </aside>
-            <section class="section-chat">
+            <section class="section-chat-container">
                <header class="header-chat">
-                <img src="#">
+                <img class="img-perfil-chat" src="#">
                 <h3 class="nome-perfil"></h3>
                </header>
                <div class="tela-msg">
                 <p class="paragrafo-msg"></p>
+
+                <div class="container-input-msg">
+                    <form method="post" class="form-msg">
+                        <input type="text" id="msg-input" name="msg">
+                        <input type="submit" id="msg-submit" name="msg" value="Enviar mensagem">
+                    </form>
+                   
+                </div>
                </div>
-               <footer>
-                <input type="text" id="msg-input" name="msg">
-                <input type="submit" id="msg-submit" name="msg" value="Enviar mensagem">
-               </footer>
+            
+                
+               
             </section>
         </section>
 
@@ -143,51 +140,53 @@
                     <h2>Chave pix: </h2>
                     <p class="info-pix">(73)98197-0054</p>
                 </header>
-                <footer class="footer-info-financeiras">
+                <div class="container-info-financeiras">
                     <article class="post-historico-financeiro">
                         <header class="header-historico-financeiro">
                             <h1>Histórico financeiro</h1>
                         </header>
-                        <span class="registro-financeiro">
-                            <h3>pedido</h3>
-                            <p>#0010</p>
-                            <h3>Estabelecimento</h3>
-                            <p>PIZZARIA E ESFIHA MALLU</p>
-                            <h3>Preço</h3>
-                            <p>R$12,30</p>
-                            <h3>Detalhe do pedido</h3>
-                            <p>1 Esfiha de carme. 1 Coca-Cola Lata</p>
-                            <h3>Status do pedido</h3>
-                            <p>Finalizado</p>
-                        </span>
-                        <span class="registro-financeiro">
-                            <h3>Pedido</h3>
-                            <p>#0010</p>
-                            <h3>Estabelecimento</h3>
-                            <p>HOUSE BURGUER 190<</p>
-                            <h3>Preço</h3>
-                            <p>R$25,50</p>
-                            <h3>Detalhe do pedido</h3>
-                            <p>1 X-Salada. 1 Suco Lata</p>
-                            <h3>Status do pedido</h3>
-                            <p>Finalizado</p>
-                        </span>
+                        <div class="registro-financeiro">
+                            <h3 class="title-registro-financeiro">pedido</h3>
+                            <p class="codigo-registro-financeiro">#0010</p>
+                            <h3 class="title-estabelecimento">Estabelecimento</h3>
+                            <p class="nome-estabelecimento">PIZZARIA E ESFIHA MALLU</p>
+                            <h3 class="title-despeza">Preço</h3>
+                            <p class="despesa">R$12,30</p>
+                            <h3 class="title-detalhe-operacao">Detalhe do pedido</h3>
+                            <p class="detalhe-operacao">1 Esfiha de carme. 1 Coca-Cola Lata</p>
+                            <h3 class="title-status-operacao">Status do pedido</h3>
+                            <p class="status-operacao">Finalizado</p>
+                        </div>
+                        <div class="registro-financeiro">
+                            <h3 class="title-registro-financeiro">Pedido</h3>
+                            <p class="codigo-registro-financeiro">#0010</p>
+                            <h3 class="title-estabelecimento">Estabelecimento</h3>
+                            <p class="nome-estabelecimento">HOUSE BURGUER 190<</p>
+                            <h3 class="title-despeza">Preço</h3>
+                            <p class="despesa">R$25,50</p>
+                            <h3 class="detalhe-operacao">Detalhe do pedido</h3>
+                            <p class="detalhe-operacao">1 X-Salada. 1 Suco Lata</p>
+                            <h3 class="title-status-operacao">Status do pedido</h3>
+                            <p class="status-operacao"></p>>Finalizado</p>
+                        </div>
                     </article>
-                </footer>
+                </div>
             </section>
             <section class="section-config-financeiras">
                 <header  class="header-config-financeiras">
                     <h1>Configurações das informações financeiras</h1>
                 </header>
                 <h1>Configurações do banco</h1>
+                <form method="post" class="form-config-financeiras">
                     <label for="inNovoBanco"><input type="text" id="inNovoBanco" placeholder="digite o nome do seu banco aqui!">Novo Banco</label>
                     <label for="inNumeroAgencia"><input type="text" id="inNumeroAgencia" placeholder="digite o número da agência aqui!">Numero da agência </label>
-                    <label for="inChavePix"><input type="text" id="inChavePix" placeholder="digite a sua chave PIX aqui!">Chave PIX </label>
+                    <label for="inFormaPagamento"><input type="text" id="inFormaPagamento" placeholder="digite a sua forma de pagamento aqui">Chave PIX </label>
                     <button class="addBanco" type="submit">Adicionar novo banco</button>
                 <h1>Depósito de valores</h1>
                 <label for="inBancoDeposito"><input type="text" id="inBancoDeposito" placeholder="Digite o seu banco"></label>
                 <label for="inValorDeposito"><input type="text" id="inValorDeposito" placeholder="Digite o valor a ser depositado"></label>
-                <button type="submit">Depositar valor</button>
+                <button type="submit" id="btnEnviarConfig">Depositar valor</button>
+                </form>
             </section>
         </div>
         
