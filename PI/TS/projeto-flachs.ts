@@ -738,15 +738,14 @@ async function paginaLogin(): Promise<void> {
 }
 
 async function paginaInicial(): Promise<void> {
-  while (true) {
-    if (usuarioLogado) {
-      await menuSessaoRestrita();
-      if (rl.closed) {
-        return;
-      }
-      continue;
+  while (usuarioLogado) {
+    await menuSessaoRestrita();
+    if ((rl as any).closed) {
+      return;
     }
+  }
 
+  while (!usuarioLogado) {
     limparTela();
     imprimePaginaPrincipal();
     console.log('Seja bem vindo ao Projeto FLACHS');
@@ -778,9 +777,12 @@ async function paginaInicial(): Promise<void> {
         await pausar();
         break;
     }
+
+    if ((rl as any).closed) {
+      return;
+    }
   }
 }
-
 // ================= INICIALIZAÇÃO =================
 
 async function main(): Promise<void> {
