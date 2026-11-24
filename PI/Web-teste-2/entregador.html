@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Pires">
+    <meta name="description" content="Página do entregador - ProjetoFLACHS">
+    <title>Página do entregador - ProjetoFLACHS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-nav-content">
+        <nav class="nav-sair">
+            <a href="Pagina-principal.html" class="icone-seta-content">
+                <img src="icone-seta-retorno.svg" alt="Voltar" class="icone-seta"> Voltar
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <header class="header-pagina-entregador">
+            <h1>Página do entregador</h1>
+        </header>
+
+        <!-- 1. MENU DE OPÇÕES RÁPIDAS -->
+        <section class="section-menu-opcoes">
+            <h2>Menu de opções</h2>
+            <button type="button" class="btn-disponibilidade">Status: Disponível para entregas</button>
+            <button type="button" class="dir-chat">Meus chats</button>
+            <button type="button" class="config-financeira">Alterar chave Pix</button>
+            <button type="button" class="config-alteracao">Editar perfil</button>
+        </section>
+
+        
+        <section class="section-info-perfil">
+            <header class="header-info-perfil">
+                <h2>Meu perfil</h2>
+                <img src="placeholder-entregador.png" alt="Foto de perfil do entregador">
+                <h3>Carlos Eduardo Silva</h3>
+                <p class="documento-entregador">CPF: 412.890.331-05 | Veículo: Moto (Honda CG 160)</p>
+            </header>
+
+            <article class="article-info-perfil">
+                <div class="info-biografia">
+                    <h3>Biografia</h3>
+                    <p class="Biografia">Entregador parceiro FLACHS desde 2025. Entregas rápidas e seguras na região central e bairros próximos.</p>
+                    <h3>Redes sociais / Contato</h3>
+                    <p class="redes-sociais">@carlosedu_entregas | WhatsApp: (11) 98812-3456</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- 3. INFORMAÇÕES FINANCEIRAS E SALDO -->
+        <section class="section-info-financeira">
+            <header class="header-info-financeira">
+                <h2>Resumo financeiro</h2>
+            </header>
+
+            <div class="info-financeira">
+                <div class="info-saldo">
+                    <h3>Saldo disponível para saque</h3>
+                    <p>R$ 485,50</p>
+                </div>
+                <div class="info-ganhos-mes">
+                    <h3>Ganhos acumulados no mês</h3>
+                    <p>R$ 1.840,00</p>
+                </div>
+                <div class="info-banco">
+                    <h3>Chave Pix cadastrada</h3>
+                    <p>(11) 98812-3456</p>
+                </div>
+                <button type="button" class="btn-solicitar-saque">Solicitar saque via Pix</button>
+            </div>
+        </section>
+
+        <!-- 4. ENTREGA ATUAL EM ANDAMENTO -->
+        <section class="section-entregas-atuais">
+            <h2>Entrega em andamento</h2>
+            <article class="post-entregas">
+                <header class="header-post-entregas">
+                    <h3>Pedido #1043 - Restaurante Sabor &amp; Brasa</h3>
+                </header>
+                <p class="itens-entrega">Itens: 1 X-Calabresa, 1 Guaraná Lata</p>
+                <p class="endereco-entrega">Destino: Rua das Flores, 245 - Centro</p>
+                <p class="valor-corrida">Ganho da entrega: <strong>R$ 8,50</strong></p>
+                <div class="status">
+                    <h4>Status da entrega:</h4>
+                    <p>A caminho do cliente</p>
+                </div>
+                <footer class="footer-opcoes-entrega">
+                    <button type="button" class="chat-empresa">Chat com a empresa</button>
+                    <button type="button" class="chat-cliente">Chat com o cliente</button>
+                    <button type="button" class="concluir-entrega">Confirmar entrega</button>
+                </footer>
+            </article>
+        </section>
+
+        <!-- 5. HISTÓRICO DE ENTREGAS FEITAS -->
+        <section class="section-historico-entregas">
+            <h2>Histórico de entregas feitas</h2>
+            <hr>
+
+            <article class="post-entregas">
+                <header class="header-post-entregas">
+                    <h3>Pedido #1042 - Restaurante Sabor &amp; Brasa</h3>
+                </header>
+                <p class="data-entrega">Data: 18/11/2026 às 10:40</p>
+                <p class="itens-entrega">Itens: 1 Combo família</p>
+                <p class="endereco-entrega">Destino: Av. Brasil, 1020 - Jardim América</p>
+                <p class="valor-corrida">Ganho da entrega: <strong>R$ 12,00</strong></p>
+                <div class="status">
+                    <h4>Status:</h4>
+                    <p>Concluída</p>
+                </div>
+            </article>
+
+            <article class="post-entregas">
+                <header class="header-post-entregas">
+                    <h3>Pedido #1041 - Restaurante Sabor &amp; Brasa</h3>
+                </header>
+                <p class="data-entrega">Data: 17/11/2026 às 22:05</p>
+                <p class="itens-entrega">Itens: 1 Frango empanado/Batatas fritas, 1 Limonada</p>
+                <p class="endereco-entrega">Destino: Rua Sete de Setembro, 88 - Vila Nova</p>
+                <p class="valor-corrida">Ganho da entrega: <strong>R$ 9,50</strong></p>
+                <div class="status">
+                    <h4>Status:</h4>
+                    <p>Concluída</p>
+                </div>
+            </article>
+
+            <article class="post-entregas">
+                <header class="header-post-entregas">
+                    <h3>Pedido #1040 - Restaurante Sabor &amp; Brasa</h3>
+                </header>
+                <p class="data-entrega">Data: 16/11/2026 às 20:35</p>
+                <p class="itens-entrega">Itens: 2 X-Salada, 2 Limonadas</p>
+                <p class="endereco-entrega">Destino: Rua XV de Novembro, 510 - Centro</p>
+                <p class="valor-corrida">Ganho da entrega: <strong>R$ 8,50</strong></p>
+                <div class="status">
+                    <h4>Status:</h4>
+                    <p>Concluída</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- 6. HISTÓRICO FINANCEIRO DO ENTREGADOR -->
+        <section class="section-historico-financas">
+            <header class="header-historico-financas">
+                <h2>Histórico financeiro</h2>
+            </header>
+
+            <div class="conteudo-historico-financas">
+                <div class="item-movimentacao entrada">
+                    <div class="info-movimentacao">
+                        <h3>Repasse Corrida #1042</h3>
+                        <p class="data-movimentacao">18/11/2026 - 10:42</p>
+                    </div>
+                    <div class="valores-movimentacao">
+                        <p class="tipo-movimentacao">Entrega concluída (Isento de taxa)</p>
+                        <p class="valor-liquido"><strong>+ R$ 12,00</strong></p>
+                    </div>
+                </div>
+
+                <div class="item-movimentacao entrada">
+                    <div class="info-movimentacao">
+                        <h3>Repasse Corrida #1041</h3>
+                        <p class="data-movimentacao">17/11/2026 - 22:06</p>
+                    </div>
+                    <div class="valores-movimentacao">
+                        <p class="tipo-movimentacao">Entrega concluída (Isento de taxa)</p>
+                        <p class="valor-liquido"><strong>+ R$ 9,50</strong></p>
+                    </div>
+                </div>
+
+                <div class="item-movimentacao saida">
+                    <div class="info-movimentacao">
+                        <h3>Saque via Pix - Chave (11) 98812-3456</h3>
+                        <p class="data-movimentacao">17/11/2026 - 14:00</p>
+                    </div>
+                    <div class="valores-movimentacao">
+                        <p class="tipo-movimentacao">Transferência para conta bancária</p>
+                        <p class="valor-liquido"><strong>- R$ 250,00</strong></p>
+                    </div>
+                </div>
+
+                <div class="item-movimentacao entrada">
+                    <div class="info-movimentacao">
+                        <h3>Repasse Corrida #1040</h3>
+                        <p class="data-movimentacao">16/11/2026 - 20:35</p>
+                    </div>
+                    <div class="valores-movimentacao">
+                        <p class="tipo-movimentacao">Entrega concluída (Isento de taxa)</p>
+                        <p class="valor-liquido"><strong>+ R$ 8,50</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js" defer></script>
+</body>
+</html>
