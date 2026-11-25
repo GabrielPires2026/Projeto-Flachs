@@ -94,9 +94,7 @@
 
 
         <div class="pagina-cliente" style="display:flex;">
-            <header class="cabecalho-">
-
-            </header>
+            
             <section class="section-perfil">
                 <article class="article-info-perfil">
                     <header class="header-info-perfil">
@@ -182,7 +180,7 @@
                 
                 <div class="config-financeiras">
                     <header class="header-config-financeiras">
-                        <h1>Configurações das informações financeiras</h1>
+                        <h2>Configurações das informações financeiras</h2>
                     </header>
                     <h1>Configurações do banco</h1>
                     <form method="post" class="form-config-financeiras">
@@ -217,14 +215,55 @@
             <header class="cabecalho-">
 
             </header>
+            <section class="section-perfil">
+                <article class="article-info-perfil">
+                    <header class="header-info-perfil">
+                        <h1>Tipo de perfil: </h1>
+                        <span class="tipo-perfil">Empresário</span>
+                        <img class="img-perfil-empresario" src="">
+                    </header>
+                    <section class="section-info-perfil">
+                        <header class="info-principais">
+                            <h2 class="title-biografia">Biografia</h2>
+                            <p class="Biografia"></p>
+                            <h2>Redes sociais</h2>
+                            <p class="redes-sociais"></p>
+                        </header>
+                        <h3 class="title-cnpj">CNPJ</h3>
+                        <span class="info-cnpj"></span>
+                        <h2>Informações financeiras</h2>
+                        <h3>Saldo atual</h3>
+                        <span class="info-saldo"> R$ 135,90</span>
+                        <h3 class="title-forma-pagamento">Chave pix</h3>
+                        <span class="info-forma-pagamentos">(73)98197-0054</span>
+                        <button class="config-alteracao-perfil">Alterar perfil</button>
+                    </section>
+            </section>
             <section class="section-principal">
 
             </section>
-            <section class="section-perfil">
-
-            </section>
+            
             <section class="section-configs">
-
+                 <header class="header-config-financeiras">
+                        <h2>Configurações das informações financeiras</h2>
+                    </header>
+                    <h1>Configurações do banco</h1>
+                    <form method="post" class="form-config-financeiras">
+                        <label for="inNovoBanco"><input type="text" id="inNovoBanco"
+                                placeholder="digite o nome do seu banco aqui!">Novo Banco</label>
+                        <label for="inNumeroAgencia"><input type="text" id="inNumeroAgencia"
+                                placeholder="digite o número da agência aqui!">Numero da agência </label>
+                        <label for="inFormaPagamento"><input type="text" id="inFormaPagamento"
+                                placeholder="digite a sua forma de pagamento aqui">Chave PIX </label>
+                        <button class="addBanco" type="submit">Adicionar novo banco</button>
+                        <h1>Depósito de valores</h1>
+                        <label for="inBancoDeposito"><input type="text" id="inBancoDeposito"
+                                placeholder="Digite o seu banco"></label>
+                        <label for="inValorDeposito"><input type="text" id="inValorDeposito"
+                                placeholder="Digite o valor a ser depositado"></label>
+                        <button type="submit" id="btnEnviarConfig">Depositar valor</button>
+                    </form>
+                    
             </section>
         </div>
         <div class="pagina-entregador" style="display:flex;">
