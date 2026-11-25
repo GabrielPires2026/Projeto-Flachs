@@ -21,85 +21,199 @@
         <div class="pagina-cadastro">
             <section class="section-form-cadastro">
                 <form action="#" method="post" class="form-cadastro">
-                     <h1>Cadastre-se aqui:  </h1>
-                <form action="#" method="post">
-                    <fieldset class="informacoes-pessoais"> <legend>Informações pessoais</legend>
-                        <label for="inNome"> Digite seu nome:
-                        <input type="text" id="inNome" name="nome" required>
-                        </label>
-                    <label for="inEmail"> Digite um email válido:
-                        <input type="email" id="inEmail" name="e-mail" placeholder="Ex: nomeDoEmail@gmail.com" required>
-                    </label>
-                    <label for="inCpf"> Digite seu CPF:
-                        <input type="text" id="inCpf" name="cpf" minlength="14" maxlength="14"  required>
-                    </label>
-                    <label for="inSenha"> Digite uma senha forte: 
-                        <input type="password" id="inSenha" name="senha" required>
-                    </label>
-                    <label for="inConfirmaSenha"> Confirme sua senha:
-                        <input type="password" id="inConfirmarSenha" name="confirmarSenha" required>
-                    </label>
-                    </fieldset>
-                    <fieldset class="informacoes-local"> <legend>Localização: </legend>
-                        <h2>Região:</h2>
-                        <label for="inEstado"> Digite o estado 
-                            <input type="text" id="inEstado" name="estado" required>
-                        </label>
-                        <label for="inCidade">Digite a cidade onde você mora
-                            <input type="text" id="inCidade" name="cidade" required>
-                        </label>
-                        <h2>Endereço: </h2>
-                        <label for="inBairro">Digite o bairro onde você mora 
-                            <input type="text" id="inBairro" name="bairro" required>
-                        </label>
-                        <label for="inRua"> Digite o nome da rua onde você mora 
-                            <input type="text" id="inRua" name="rua" required>
-                        </label>
-                        <label for="inSN"> S/N <input type="radio" id="inSN" name="semNumero"></label>
-                        <label for="inNumero">Digite o número da sua residência
-                            <input type="number" id="inNumero">
-                        </label>
-                        <label for="inComplemento">Complemento (opcional)
-                            <textarea id="inComplemento"></textarea>
-                        </label>
-                    </fieldset>
-                    <fieldset class="forma-cadastro"><legend>Forma de cadástro</legend>
-                    <h2>Como você deseja se cadastrar?</h2>
-                    <label for="inCliente">
-                        <input type="radio" id="inCliente" name="clientes"> sou cliente 
-                    </label>
-                    <label for="inEntregador">
-                        <input type="radio" id="inEntregador" name="entregadores"> Sou entregador 
-                    </label>
-                    <label for="inVendedor">
-                        <input type="radio" id="inVendedor" name="vendedores">Sou vendedor
-                    </label>
-                    <label for="inEmpresario">
-                        <input type="radio" id="inEmpresario" name="empresarios">Sou empresário
-                    </label>
-                    </fieldset>
-                    <input type="submit" id="btnEnviar" value="Cadastrar-se">
-                    <input type="reset" id="btnResetar" value="Recarregar página">
+                    <h1>Cadastre-se aqui: </h1>
+                    <form action="#" method="post">
+                        <fieldset class="informacoes-pessoais">
+                            <legend>Informações pessoais</legend>
+                            <label for="inNome"> Digite seu nome:
+                                <input type="text" id="inNome" name="nome" required>
+                            </label>
+                            <label for="inEmail"> Digite um email válido:
+                                <input type="email" id="inEmail" name="e-mail" placeholder="Ex: nomeDoEmail@gmail.com"
+                                    required>
+                            </label>
+                            <label for="inCpf"> Digite seu CPF:
+                                <input type="text" id="inCpf" name="cpf" minlength="14" maxlength="14" required>
+                            </label>
+                            <label for="inSenha"> Digite uma senha forte:
+                                <input type="password" id="inSenha" name="senha" required>
+                            </label>
+                            <label for="inConfirmaSenha"> Confirme sua senha:
+                                <input type="password" id="inConfirmarSenha" name="confirmarSenha" required>
+                            </label>
+                        </fieldset>
+                        <fieldset class="informacoes-local">
+                            <legend>Localização: </legend>
+                            <h2>Região:</h2>
+                            <label for="inEstado"> Digite o estado
+                                <input type="text" id="inEstado" name="estado" required>
+                            </label>
+                            <label for="inCidade">Digite a cidade onde você mora
+                                <input type="text" id="inCidade" name="cidade" required>
+                            </label>
+                            <h2>Endereço: </h2>
+                            <label for="inBairro">Digite o bairro onde você mora
+                                <input type="text" id="inBairro" name="bairro" required>
+                            </label>
+                            <label for="inRua"> Digite o nome da rua onde você mora
+                                <input type="text" id="inRua" name="rua" required>
+                            </label>
+                            <label for="inSN"> S/N <input type="radio" id="inSN" name="semNumero"></label>
+                            <label for="inNumero">Digite o número da sua residência
+                                <input type="number" id="inNumero">
+                            </label>
+                            <label for="inComplemento">Complemento (opcional)
+                                <textarea id="inComplemento"></textarea>
+                            </label>
+                        </fieldset>
+                        <fieldset class="forma-cadastro">
+                            <legend>Forma de cadástro</legend>
+                            <h2>Como você deseja se cadastrar?</h2>
+                            <label for="inCliente">
+                                <input type="radio" id="inCliente" name="clientes"> sou cliente
+                            </label>
+                            <label for="inEntregador">
+                                <input type="radio" id="inEntregador" name="entregadores"> Sou entregador
+                            </label>
+                            <label for="inVendedor">
+                                <input type="radio" id="inVendedor" name="vendedores">Sou vendedor
+                            </label>
+                            <label for="inEmpresario">
+                                <input type="radio" id="inEmpresario" name="empresarios">Sou empresário
+                            </label>
+                        </fieldset>
+                        <input type="submit" id="btnEnviar" value="Cadastrar-se">
+                        <input type="reset" id="btnResetar" value="Recarregar página">
+                    </form>
                 </form>
-                </form>
-            </section> 
+            </section>
         </div>
 
-        <div class="pagina-cliente" style="display:none;">
+
+
+
+
+        <div class="pagina-cliente" style="display:flex;">
             <header class="cabecalho-">
 
             </header>
-            <section class="section-principal">
-
-            </section>
             <section class="section-perfil">
-
+                <article class="article-info-perfil">
+                    <header class="header-info-perfil">
+                        <h1>Tipo de perfil: </h1>
+                        <span class="tipo-perfil">Cliente</span>
+                        <img class="img-perfil-cliente" src="">
+                    </header>
+                    <article class="article-info-perfil">
+                        <header class="info-biografia">
+                            <h2>Biografia</h2>
+                            <p class="Biografia"></p>
+                            <h2>Redes sociais</h2>
+                            <p class="redes-sociais"></p>
+                        </header>
+                        <h2>Informações financeiras</h2>
+                        <h3>Saldo atual</h3>
+                        <span class="info-saldo"> R$ 135,90</span>
+                        <h3 class="title-forma-pagamento">Chave pix</h3>
+                        <span class="info-forma-pagamentos">(73)98197-0054</span>
+                        <button class="config-alteracao-perfil">Alterar perfil</button>
+                    </article>
+            </section>
+            <section class="section-principal">
+                <article class="post-pedidos">
+                    <h2>Pedido atual</h2>
+                    <header class="header-post-pedidos">
+                        <h1>PIZZARIA E ESFIHA MALLU</h1>
+                    </header>
+                    <span class="pedido">1 Esfiha de carme. 1 Coca-Cola Lata</span>
+                    <span class="preco-pedido">R$12,30</span>
+                    <footer class="footer-opcoes-pedido">
+                        <button class="chat-entregador">Chat com o entregador</button>
+                        <button class="cancela-pedido">Cancelar pedido</button>
+                    </footer>
+                </article>
+                <h2>Pedidos anteriores</h2>
+                <hr>
+                <article class="post-pedidos">
+                    <header class="header-post-pedidos">
+                        <h1>HOUSE BURGUER 190</h1>
+                    </header>
+                    <span class="pedido">1 X-Salada. 1 Suco Lata</span>
+                    <span class="preco-pedido">R$25,50</span>
+                    <footer class="footer-opcoes-pedido">
+                        <button class="chat-entregador">Chat com o entregador</button>
+                    </footer>
+                    <button class="novo-pedido">Adicionar novo pedido</button>
+                    <dialog class="dialog-novo-pedido">
+                        <form method="dialog">
+                            <select class="select-novo-pedido">Escolha um estabelecimento
+                                <option class="op1">PIZZARIA E ESFIHA MALLU</option>
+                                <option class="op2">HOUSE BURGUER 190</option>
+                                <option class="op3">Adicionar novo estabelecimento</option>
+                            </select>
+                            <article class="cardapio">
+                                <h2 class="title-cardapio"></h2>
+                            </article>
+                            <label for="inNome-pedido">Digite o seu pedido</label>
+                            <input type="text" id="inNome-pedido"><br>
+                            <input type="submit" id="btnEnviar-pedido" value="Enviar pedido">
+                            <input type="button" id="btnCancelar-acao-pedido" value="Cancelar pedido">
+                        </form>
+                    </dialog>
+                    <dialog class="dialog-chat-entregador">
+                        <article class="msg-container">
+                            <header class="header-msg-container">
+                                <h2 class="title-perfil-chat"></h2>
+                                <img src="#" class="img-perfil-chat">
+                            </header>
+                            <div class="msg-content"></div>
+                        </article>
+                        <div class="caixa-dialogo">
+                            <input type="text" id="inMsg">
+                            <input type="button" id="btnEnviar-msg">
+                        </div>
+                        <footer class="footer-dialog-msg">
+                            <input type="button" id="btnSair">
+                        </footer>
+                    </dialog>
+                </article>
             </section>
             <section class="section-configs">
                 
+                <div class="config-financeiras">
+                    <header class="header-config-financeiras">
+                        <h1>Configurações das informações financeiras</h1>
+                    </header>
+                    <h1>Configurações do banco</h1>
+                    <form method="post" class="form-config-financeiras">
+                        <label for="inNovoBanco"><input type="text" id="inNovoBanco"
+                                placeholder="digite o nome do seu banco aqui!">Novo Banco</label>
+                        <label for="inNumeroAgencia"><input type="text" id="inNumeroAgencia"
+                                placeholder="digite o número da agência aqui!">Numero da agência </label>
+                        <label for="inFormaPagamento"><input type="text" id="inFormaPagamento"
+                                placeholder="digite a sua forma de pagamento aqui">Chave PIX </label>
+                        <button class="addBanco" type="submit">Adicionar novo banco</button>
+                        <h1>Depósito de valores</h1>
+                        <label for="inBancoDeposito"><input type="text" id="inBancoDeposito"
+                                placeholder="Digite o seu banco"></label>
+                        <label for="inValorDeposito"><input type="text" id="inValorDeposito"
+                                placeholder="Digite o valor a ser depositado"></label>
+                        <button type="submit" id="btnEnviarConfig">Depositar valor</button>
+                    </form>
+                    
+                </div>
+                <p>
+                    <small>Mais configurções serão adicionadas posteriormente.</small>
+                </p>
             </section>
         </div>
-        <div class="pagina-empresario" style="display:none;">
+
+
+
+
+
+
+        <div class="pagina-empresario" style="display:flex;">
             <header class="cabecalho-">
 
             </header>
@@ -113,7 +227,7 @@
 
             </section>
         </div>
-        <div class="pagina-entregador" style="display:none;">
+        <div class="pagina-entregador" style="display:flex;">
             <header class="cabecalho-">
 
             </header>
@@ -127,7 +241,7 @@
 
             </section>
         </div>
-        <div class="pagina-vendedor" style="display:none;">
+        <div class="pagina-vendedor" style="display:flex;">
             <header class="cabecalho-">
 
             </header>
