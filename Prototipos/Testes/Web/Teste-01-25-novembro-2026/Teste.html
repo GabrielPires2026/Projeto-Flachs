@@ -1,133 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--TAG QUE DEVERÁ SER ALTERADA CONFORME MODIFICAÇÕES NO CÓDIGO-->
-    <meta name="author" content="Gabriel Pires">
-    <meta name="description" content="Pagina inicial - Projeto Flach's">
+    <title>FLACH'S - Marketplace e Logística Periférica</title>
     <link rel="stylesheet" href="Teste.css">
-    <title>Pagina principal - Projeto Flach's</title>
 </head>
-
 <body>
-    <header class="cabecalho-pagina">
-        <button class="btn-navegacao">
-            <img class="icone-voltar"> Voltar à página inicial.
-        </button>
-    </header>
-
-
-
-
-
-
     <main class="container-pagina">
 
-
-
+        <!-- ================= PÁGINA DE CADASTRO ================= -->
         <div class="pagina-cadastro">
             <section class="section-form-cadastro">
                 <form action="#" method="post" class="form-cadastro">
-                    <h1>Cadastre-se aqui: </h1>
-                    <form action="#" method="post">
-                        <fieldset class="informacoes-pessoais">
-                            <legend>Informações pessoais</legend>
-                            <label for="inNome"> Digite seu nome:
-                                <input type="text" id="inNome" name="nome" required>
-                            </label><br>
-                            <label for="inEmail"> Digite um email válido:
-                                <input type="email" id="inEmail" name="e-mail" placeholder="Ex: nomeDoEmail@gmail.com"
-                                    required>
-                            </label><br>
-                            <label for="inCpf"> Digite seu CPF:
-                                <input type="text" id="inCpf" name="cpf" minlength="14" maxlength="14" required>
-                            </label><br>
-                            <label for="inSenha"> Digite uma senha forte:
-                                <input type="password" id="inSenha" name="senha" required>
-                            </label><br>
-                            <label for="inConfirmaSenha"> Confirme sua senha:
-                                <input type="password" id="inConfirmarSenha" name="confirmarSenha" required>
-                            </label><br>
-                        </fieldset>
-                        <fieldset class="informacoes-local">
-                            <legend>Localização: </legend>
-                            <h2>Região:</h2>
-                            <label for="inEstado"> Digite o estado
-                                <input type="text" id="inEstado" name="estado" required>
-                            </label><br>
-                            <label for="inCidade">Digite a cidade onde você mora
-                                <input type="text" id="inCidade" name="cidade" required>
-                            </label><br>
-                            <h2>Endereço: </h2>
-                            <label for="inBairro">Digite o bairro onde você mora
-                                <input type="text" id="inBairro" name="bairro" required>
-                            </label><br>
-                            <label for="inRua"> Digite o nome da rua onde você mora
-                                <input type="text" id="inRua" name="rua" required>
-                            </label><br>
-                            <label for="inSN"> S/N <input type="radio" id="inSN" name="semNumero"></label>
-                            <label for="inNumero">Digite o número da sua residência
-                                <input type="number" id="inNumero">
-                            </label><br>
-                            <label for="inComplemento">Complemento (opcional)
-                                <textarea id="inComplemento"></textarea>
-                            </label><br>
-                        </fieldset>
-                        <fieldset class="forma-cadastro">
-                            <legend>Forma de cadástro</legend>
-                            <h2>Como você deseja se cadastrar?</h2>
-                            <label for="inCliente" class="radio-content">
-                                <input type="radio" id="inCliente" name="clientes"> sou cliente
-                            </label><br>
-                            <label for="inEntregador" class="radio-content">
-                                <input type="radio" id="inEntregador" name="entregadores"> Sou entregador
-                            </label><br>
-                            <label for="inEmpresario" class="radio-content">
-                                <input type="radio" id="inEmpresario" name="empresarios">Sou empresário
+                    <h1>Cadastre-se aqui</h1>
+                    
+                    <fieldset class="informacoes-pessoais">
+                        <legend>Informações pessoais</legend>
+                        <label for="inNome">Digite seu nome:
+                            <input type="text" id="inNome" name="nome" required>
+                        </label>
+                        <label for="inEmail">Digite um e-mail válido:
+                            <input type="email" id="inEmail" name="e-mail" placeholder="Ex: nome@gmail.com" required>
+                        </label>
+                        <label for="inCpf">Digite seu CPF:
+                            <input type="text" id="inCpf" name="cpf" minlength="14" maxlength="14" required>
+                        </label>
+                        <label for="inSenha">Digite uma senha forte:
+                            <input type="password" id="inSenha" name="senha" required>
+                        </label>
+                        <label for="inConfirmarSenha">Confirme sua senha:
+                            <input type="password" id="inConfirmarSenha" name="confirmarSenha" required>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="informacoes-local">
+                        <legend>Localização</legend>
+                        <h2>Região:</h2>
+                        <label for="inEstado">Digite o estado:
+                            <input type="text" id="inEstado" name="estado" required>
+                        </label>
+                        <label for="inCidade">Digite a cidade:
+                            <input type="text" id="inCidade" name="cidade" required>
+                        </label>
+
+                        <h2>Endereço:</h2>
+                        <label for="inBairro">Digite o bairro:
+                            <input type="text" id="inBairro" name="bairro" required>
+                        </label>
+                        <label for="inRua">Digite o nome da rua:
+                            <input type="text" id="inRua" name="rua" required>
+                        </label>
+                        <div class="opcao-proffisao">
+                            <label for="inSN">S/N
+                                <input type="radio" id="inSN" name="semNumero">
                             </label>
-                        </fieldset><br>
+                            <label for="inNumero">Número:
+                                <input type="number" id="inNumero" name="numero">
+                            </label>
+                        </div>
+                        <label for="inComplemento">Complemento (opcional):
+                            <textarea id="inComplemento" name="complemento"></textarea>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="forma-cadastro">
+                        <legend>Forma de cadastro</legend>
+                        <h2>Como você deseja se cadastrar?</h2>
+                        <label for="inCliente" class="radio-content">
+                            <input type="radio" id="inCliente" name="tipoPerfil" value="cliente"> Sou cliente
+                        </label>
+                        <label for="inEntregador" class="radio-content">
+                            <input type="radio" id="inEntregador" name="tipoPerfil" value="entregador"> Sou entregador
+                        </label>
+                        <label for="inEmpresario" class="radio-content">
+                            <input type="radio" id="inEmpresario" name="tipoPerfil" value="empresario"> Sou empresário
+                        </label>
+                    </fieldset>
+
+                    <div class="acoes-form">
                         <input type="submit" id="btnEnviar" value="Cadastrar-se">
                         <input type="reset" id="btnResetar" value="Recarregar página">
-                    </form>
+                    </div>
                 </form>
             </section>
         </div>
 
-
-
-
-
-        <div class="pagina-cliente" style="display:flex;">
-
+        <!-- ================= PÁGINA DO CLIENTE ================= -->
+        <div class="pagina-cliente" style="display:none;">
             <section class="section-perfil">
                 <article class="article-info-perfil">
                     <header class="header-info-perfil">
-                        <h1>Tipo de perfil: </h1>
+                        <h1>Tipo de perfil:</h1>
                         <span class="tipo-perfil">Cliente</span>
-                        <img class="img-perfil-cliente" src="">
+                        <img class="img-perfil-cliente" src="#" alt="Foto de Perfil do Cliente">
                     </header>
-                    <article class="article-info-perfil">
-                            <h2>Biografia</h2>
-                            <p class="Biografia"></p>
-                            <h2>Redes sociais</h2>
-                            <p class="redes-sociais"></p>
-                        <h2>Informações financeiras</h2>
-                        <h3>Saldo atual</h3>
-                        <span class="info-saldo"> R$ 135,90</span>
-                        <h3 class="title-forma-pagamento">Chave pix</h3>
-                        <span class="info-forma-pagamentos">(73)98197-0054</span>
-                        <button class="config-alteracao-perfil">Alterar perfil</button>
-                    </article>
+                    <div class="info-principais">
+                        <h2>Biografia</h2>
+                        <p class="Biografia">Cliente ativo na comunidade de Eunápolis.</p>
+                        <h2>Redes sociais</h2>
+                        <p class="redes-sociais">@cliente_flachs</p>
+                    </div>
+                    <h2>Informações financeiras</h2>
+                    <h3>Saldo atual</h3>
+                    <span class="info-saldo">R$ 135,90</span>
+                    <h3 class="title-forma-pagamento">Chave PIX</h3>
+                    <span class="info-forma-pagamentos">(73) 98197-0054</span>
+                    <button class="config-alteracao-perfil">Alterar perfil</button>
+                </article>
             </section>
-
-
-
-
-
-
-
 
             <section class="section-principal">
                 <article class="post-pedidos">
@@ -135,13 +116,14 @@
                     <header class="header-post-pedidos">
                         <h1>PIZZARIA E ESFIHA MALLU</h1>
                     </header>
-                    <span class="pedido">1 Esfiha de carme. 1 Coca-Cola Lata</span>
-                    <span class="preco-pedido">R$12,30</span>
+                    <span class="pedido">1 Esfiha de carne. 1 Coca-Cola Lata</span>
+                    <span class="preco-pedido">R$ 12,30</span>
                     <footer class="footer-opcoes-pedido">
                         <button class="chat-entregador">Chat com o entregador</button>
                         <button class="cancela-pedido">Cancelar pedido</button>
                     </footer>
                 </article>
+
                 <h2>Pedidos anteriores</h2>
                 <hr>
                 <article class="post-pedidos-anteriores">
@@ -149,112 +131,108 @@
                         <h1>HOUSE BURGUER 190</h1>
                     </header>
                     <span class="pedido">1 X-Salada. 1 Suco Lata</span>
-                    <span class="preco-pedido">R$25,50</span>
+                    <span class="preco-pedido">R$ 25,50</span>
                     <footer class="footer-opcoes-pedido">
                         <button class="chat-entregador">Chat com o entregador</button>
                     </footer>
                     <button class="novo-pedido">Adicionar novo pedido</button>
-                    <dialog class="dialog-novo-pedido">
-                        <form method="dialog">
-                            <select class="select-novo-pedido">Escolha um estabelecimento
-                                <option class="op1">PIZZARIA E ESFIHA MALLU</option>
-                                <option class="op2">HOUSE BURGUER 190</option>
-                                <option class="op3">Adicionar novo estabelecimento</option>
-                            </select>
-                            <article class="cardapio">
-                                <h2 class="title-cardapio"></h2>
-                            </article>
-                            <label for="inNome-pedido">Digite o seu pedido</label>
-                            <input type="text" id="inNome-pedido"><br>
-                            <input type="submit" id="btnEnviar-pedido" value="Enviar pedido">
-                            <input type="button" id="btnCancelar-acao-pedido" value="Cancelar pedido">
-                        </form>
-                    </dialog>
-                    <dialog class="dialog-chat-entregador">
-                        <article class="msg-container">
-                            <header class="header-msg-container">
-                                <h2 class="title-perfil-chat"></h2>
-                                <img src="#" class="img-perfil-chat">
-                            </header>
-                            <div class="msg-content"></div>
-                        </article>
-                        <div class="caixa-dialogo">
-                            <input type="text" id="inMsg">
-                            <input type="button" id="btnEnviar-msg">
-                        </div>
-                        <footer class="footer-dialog-msg">
-                            <input type="button" id="btnSair">
-                        </footer>
-                    </dialog>
                 </article>
-            </section>
-            <section class="section-configs">
 
+                <dialog class="dialog-novo-pedido">
+                    <form method="dialog">
+                        <select class="select-novo-pedido">
+                            <option value="" disabled selected>Escolha um estabelecimento</option>
+                            <option class="op1">PIZZARIA E ESFIHA MALLU</option>
+                            <option class="op2">HOUSE BURGUER 190</option>
+                            <option class="op3">Adicionar novo estabelecimento</option>
+                        </select>
+                        <article class="cardapio">
+                            <h2 class="title-cardapio">Cardápio do Estabelecimento</h2>
+                        </article>
+                        <label for="inNome-pedido">Digite o seu pedido:</label>
+                        <input type="text" id="inNome-pedido">
+                        <input type="submit" id="btnEnviar-pedido" value="Enviar pedido">
+                        <input type="button" id="btnCancelar-acao-pedido" value="Cancelar pedido">
+                    </form>
+                </dialog>
+
+                <dialog class="dialog-chat-entregador">
+                    <article class="msg-container">
+                        <header class="header-msg-container">
+                            <h2 class="title-perfil-chat">Conversa com Entregador</h2>
+                            <img src="#" class="img-perfil-chat" alt="Perfil Entregador">
+                        </header>
+                        <div class="msg-content"></div>
+                    </article>
+                    <div class="caixa-dialogo">
+                        <input type="text" id="inMsg" placeholder="Digite sua mensagem...">
+                        <input type="button" id="btnEnviar-msg" value="Enviar">
+                    </div>
+                    <footer class="footer-dialog-msg">
+                        <input type="button" id="btnSair" value="Fechar Chat">
+                    </footer>
+                </dialog>
+            </section>
+
+            <section class="section-configs">
                 <div class="config-financeiras">
                     <header class="header-config-financeiras">
                         <h2>Configurações das informações financeiras</h2>
                     </header>
                     <h1>Configurações do banco</h1>
                     <form method="post" class="form-config-financeiras">
-                        <label for="inNovoBanco"><input type="text" id="inNovoBanco"
-                                placeholder="digite o nome do seu banco aqui!">Novo Banco</label>
-                        <label for="inNumeroAgencia"><input type="text" id="inNumeroAgencia"
-                                placeholder="digite o número da agência aqui!">Numero da agência </label>
-                        <label for="inFormaPagamento"><input type="text" id="inFormaPagamento"
-                                placeholder="digite a sua forma de pagamento aqui">Chave PIX </label>
+                        <label for="inNovoBanco">Novo Banco:
+                            <input type="text" id="inNovoBanco" placeholder="Digite o nome do seu banco">
+                        </label>
+                        <label for="inNumeroAgencia">Número da agência:
+                            <input type="text" id="inNumeroAgencia" placeholder="Digite o número da agência">
+                        </label>
+                        <label for="inFormaPagamento">Chave PIX:
+                            <input type="text" id="inFormaPagamento" placeholder="Digite sua chave PIX">
+                        </label>
                         <button class="addBanco" type="submit">Adicionar novo banco</button>
+
                         <h1>Depósito de valores</h1>
-                        <label for="inBancoDeposito"><input type="text" id="inBancoDeposito"
-                                placeholder="Digite o seu banco"></label>
-                        <label for="inValorDeposito"><input type="text" id="inValorDeposito"
-                                placeholder="Digite o valor a ser depositado"></label>
+                        <label for="inBancoDeposito">Banco:
+                            <input type="text" id="inBancoDeposito" placeholder="Digite o seu banco">
+                        </label>
+                        <label for="inValorDeposito">Valor:
+                            <input type="text" id="inValorDeposito" placeholder="Digite o valor a ser depositado">
+                        </label>
                         <button type="submit" id="btnEnviarConfig">Depositar valor</button>
                     </form>
-
                 </div>
-                <p>
-                    <small>Mais configurções serão adicionadas posteriormente.</small>
-                </p>
+                <p><small>Mais configurações serão adicionadas posteriormente.</small></p>
             </section>
         </div>
 
-
-
-
-
-
-        <div class="pagina-empresario" style="display:flex;">
-
-
-
-
+        <!-- ================= PÁGINA DO EMPRESÁRIO ================= -->
+        <div class="pagina-empresario" style="display:none">
             <section class="section-perfil">
                 <article class="article-info-perfil">
                     <header class="header-info-perfil">
-                        <h1>Tipo de perfil: </h1>
+                        <h1>Tipo de perfil:</h1>
                         <span class="tipo-perfil">Empresário</span>
-                        <img class="img-perfil-empresario" src="">
+                        <img class="img-perfil-empresario" src="#" alt="Foto do Empresário">
                     </header>
                     <section class="section-info-perfil">
                         <header class="info-principais">
                             <h2 class="title-biografia">Biografia</h2>
-                            <p class="Biografia"></p>
+                            <p class="Biografia">Comerciante local especializado em lanches.</p>
                             <h2>Redes sociais</h2>
-                            <p class="redes-sociais"></p>
+                            <p class="redes-sociais">@pizzariamallu</p>
                         </header>
                         <h3 class="title-cnpj">CNPJ</h3>
-                        <span class="info-cnpj"></span>
+                        <span class="info-cnpj">12.345.678/0001-90</span>
                         <h2>Informações financeiras</h2>
                         <h3>Saldo atual</h3>
-                        <span class="info-saldo"> R$ 135,90</span>
-                        <h3 class="title-forma-pagamento">Chave pix</h3>
-                        <span class="info-forma-pagamentos">(73)98197-0054</span>
+                        <span class="info-saldo">R$ 1.250,00</span>
+                        <h3 class="title-forma-pagamento">Chave PIX</h3>
+                        <span class="info-forma-pagamentos">comercial@mallu.com</span>
                         <button class="config-alteracao-perfil">Alterar perfil</button>
                     </section>
+                </article>
             </section>
-
-
-
 
             <section class="section-principal">
                 <article class="post-pedido-atual">
@@ -262,10 +240,10 @@
                         <h1 class="title-pedido-atual">Pedido atual</h1>
                     </header>
                     <div class="info-pedido-atual">
-                        <h2 class="title-pedido-atual">1 X-Calabresa, 1 Coca-Cola Lata</h2>
+                        <h2>1 X-Calabresa, 1 Coca-Cola Lata</h2>
                         <h3 class="title-preco-pedido">Preço</h3>
                         <span class="preco-pedido">R$ 24,30</span>
-                        <span class="taxa-retida">Taxa retida (FLACH'S): 5% - R$ 1,21 </span>
+                        <span class="taxa-retida">Taxa retida (FLACH'S): 5% - R$ 1,21</span>
                         <h3 class="title-status-entrega">Status da entrega</h3>
                         <span class="status-entrega">Em andamento</span>
                     </div>
@@ -274,22 +252,25 @@
                         <button class="btn-cancelar-pedido">Cancelar pedido</button>
                     </footer>
                 </article>
+
                 <article class="post-pedidos-anteriores">
                     <header class="header-post-pedido-anterior">
                         <h2 class="title-pedido-anterior">Pedidos anteriores</h2>
                     </header>
                     <div class="info-pedido-anterior">
-                        <h3 class="title-pedido-anterior">1 Combo Famílha, Guaraná 2L</h3>
+                        <h3>1 Combo Família, Guaraná 2L</h3>
                         <h3 class="title-preco-pedido">Preço</h3>
-                        <span class="preco-pedido">45,00</span>
-                        <span class="taxa-retida">Taxa retida (FLACH'S): 5% - R$ 2,25 </span>
+                        <span class="preco-pedido">R$ 45,00</span>
+                        <span class="taxa-retida">Taxa retida (FLACH'S): 5% - R$ 2,25</span>
                     </div>
                     <footer class="footer-pedido-anterior">
                         <button class="btn-chat-entregador">Chat com entregador</button>
                     </footer>
                 </article>
             </section>
+
             <section class="info-produtos-vendidos">
+                <h2>Produtos no Catálogo</h2>
                 <div class="lista-produtos">
                     <div class="produto-content">
                         <h3>X-Calabresa</h3>
@@ -300,11 +281,11 @@
                         <p class="preco-produto">R$ 12,30</p>
                     </div>
                     <div class="produto-content">
-                        <h3>Frango empanado/Batatas fritas</h3>
+                        <h3>Frango empanado / Fritas</h3>
                         <p class="preco-produto">R$ 30,00</p>
                     </div>
                     <div class="produto-content">
-                        <h3>Combo família</h3>
+                        <h3>Combo Família</h3>
                         <p class="preco-produto">R$ 45,00</p>
                     </div>
                     <div class="produto-content">
@@ -313,122 +294,65 @@
                     </div>
                 </div>
             </section>
-
-            <section class="section-configs">
-                <header class="header-config-financeiras">
-                    <h2>Configurações das informações financeiras</h2>
-                </header>
-                <h1>Configurações do banco</h1>
-                <form method="post" class="form-config-financeiras">
-                    <label for="inNovoBanco"><input type="text" id="inNovoBanco"
-                            placeholder="digite o nome do seu banco aqui!">Novo Banco</label>
-                    <label for="inNumeroAgencia"><input type="text" id="inNumeroAgencia"
-                            placeholder="digite o número da agência aqui!">Numero da agência </label>
-                    <label for="inFormaPagamento"><input type="text" id="inFormaPagamento"
-                            placeholder="digite a sua forma de pagamento aqui">Chave PIX </label>
-                    <button class="addBanco" type="submit">Adicionar novo banco</button>
-                    <h1>Depósito de valores</h1>
-                    <label for="inBancoDeposito"><input type="text" id="inBancoDeposito"
-                            placeholder="Digite o seu banco"></label>
-                    <label for="inValorDeposito"><input type="text" id="inValorDeposito"
-                            placeholder="Digite o valor a ser depositado"></label>
-                    <button type="submit" id="btnEnviarConfig">Depositar valor</button>
-                </form>
-
-            </section>
         </div>
 
-
-
-
-        <div class="pagina-entregador" style="display:flex;">
-            <header class="cabecalho-">
-
+        <!-- ================= PÁGINA DO ENTREGADOR ================= -->
+        <div class="pagina-entregador" style="display:none;">
+            <header class="cabecalho">
+                <h1>Painel do Entregador</h1>
             </header>
             <section class="section-perfil">
                 <article class="article-perfil">
                     <header class="header-info-perfil">
-                        <h1>Tipo de perfil: </h1>
+                        <h1>Tipo de perfil:</h1>
                         <span class="tipo-perfil">Entregador</span>
-                        <img src="#">
-                        <h3 class="nome-entregador"></h3>
+                        <img src="#" alt="Foto do Entregador">
+                        <h3 class="nome-entregador">Carlos Santos</h3>
                         <p class="documento-entregador">CPF: 412.890.331-05 | Veículo: Moto (Honda CG 160)</p>
                     </header>
                     <h2>Biografia</h2>
-                    <p class="Biografia"></p>
+                    <p class="Biografia">Entregador parceiro atendendo a região periférica.</p>
                     <h2>Redes sociais</h2>
-                    <p class="redes-sociais"></p>
+                    <p class="redes-sociais">@carlos_entregas</p>
                 </article>
             </section>
+
             <section class="section-principal">
                 <article class="post-pedidos">
-                    <h2>Pedido atual</h2>
+                    <h2>Pedido atual para entrega</h2>
                     <header class="header-post-pedidos">
                         <h1>PIZZARIA E ESFIHA MALLU</h1>
                     </header>
-                    <span class="pedido">1 Esfiha de carme. 1 Coca-Cola Lata</span>
-                    <span class="preco-pedido">R$12,30</span>
+                    <span class="pedido">1 Esfiha de carne. 1 Coca-Cola Lata</span>
+                    <span class="preco-pedido">R$ 12,30</span>
                     <footer class="footer-opcoes-pedido">
-                        <button class="chat-entregador">Chat com o ckiente</button>
+                        <button class="chat-entregador">Chat com o cliente</button>
                         <button class="cancela-pedido">Adiar entrega</button>
                         <button class="finalizar-entrega">Concluir entrega</button>
                     </footer>
                 </article>
-                <h2>Pedidos anteriores</h2>
+
+                <h2>Entregas anteriores</h2>
                 <hr>
                 <article class="post-pedidos-anteriores">
                     <header class="header-post-pedidos">
                         <h1>HOUSE BURGUER 190</h1>
                     </header>
                     <span class="pedido">1 X-Salada. 1 Suco Lata</span>
-                    <span class="preco-pedido">R$25,50</span>
+                    <span class="preco-pedido">R$ 25,50</span>
                     <footer class="footer-opcoes-pedido">
                         <button class="chat-entregador">Chat com o cliente</button>
-                        <button class="ver-informacoes">Ver informações detalhadas do pedido</button>
+                        <button class="ver-informacoes">Ver detalhes do pedido</button>
                     </footer>
-                    <button class="novo-pedido">Adicionar novo pedido</button>
-                    <dialog class="dialog-novo-pedido">
-                        <form method="dialog">
-                            <select class="select-novo-pedido">Escolha um estabelecimento
-                                <option class="op1">PIZZARIA E ESFIHA MALLU</option>
-                                <option class="op2">HOUSE BURGUER 190</option>
-                                <option class="op3">Adicionar novo estabelecimento</option>
-                            </select>
-                            <article class="cardapio">
-                                <h2 class="title-cardapio"></h2>
-                            </article>
-                            <label for="inNome-pedido">Digite o seu pedido</label>
-                            <input type="text" id="inNome-pedido"><br>
-                            <input type="submit" id="btnEnviar-pedido" value="Enviar pedido">
-                            <input type="button" id="btnCancelar-acao-pedido" value="Cancelar pedido">
-                        </form>
-                    </dialog>
-            </section>
-            <section class="section-configs">
-                <header class="header-config-financeiras">
-                    <h2>Configurações das informações financeiras</h2>
-                </header>
-                <h1>Configurações do banco</h1>
-                <form method="post" class="form-config-financeiras">
-                    <label for="inNovoBanco"><input type="text" id="inNovoBanco"
-                            placeholder="digite o nome do seu banco aqui!">Novo Banco</label>
-                    <label for="inNumeroAgencia"><input type="text" id="inNumeroAgencia"
-                            placeholder="digite o número da agência aqui!">Numero da agência </label>
-                    <label for="inFormaPagamento"><input type="text" id="inFormaPagamento"
-                            placeholder="digite a sua forma de pagamento aqui">Chave PIX </label>
-                    <button class="addBanco" type="submit">Adicionar novo banco</button>
-                    <h1>Depósito de valores</h1>
-                    <label for="inBancoDeposito"><input type="text" id="inBancoDeposito"
-                            placeholder="Digite o seu banco"></label>
-                    <label for="inValorDeposito"><input type="text" id="inValorDeposito"
-                            placeholder="Digite o valor a ser depositado"></label>
-                    <button type="submit" id="btnEnviarConfig">Depositar valor</button>
-                </form>
-
+                </article>
             </section>
         </div>
-    </main>
-    </div>
-</body>
 
+        <div class="icone-seta-content">
+            <a href="#" class="icone-seta">↑ Voltar ao topo</a>
+        </div>
+    </main>
+
+    <script src="Teste.js" defer></script>
+</body>
 </html>

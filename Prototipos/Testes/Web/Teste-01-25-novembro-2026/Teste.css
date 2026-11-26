@@ -1,321 +1,441 @@
+/* ================= RESET E ESTILOS GERAIS ================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
-}
-html{
-    max-height: 50000;
-}
-body{
-    background: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 13;
-    max-height: 450000px;
-    color: grey;
-}
-h1, h2{
-    color: yellow;
-}
-h1{
-    text-align: center;
 }
 
-form{
-    height: 1450px;
-    max-height: 900px;
-    width: 100%;
+html {
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
-    gap: 13;
-}
-fieldset{
-    color: darkgray;
-    height: 300px;
-    max-height: 800px;
-    padding: 150px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15;
-}
-label, input{
-    height: 25px;
-    padding: .2em;
-    margin: 12px;
-    width: 450px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    gap: 15;
-    row-gap: 15;
-}
-input{
-    color: white;
-}
-.form-cadastro-content{
+    min-height: 100vh;
     padding: 20px;
-    max-height: 1500px;
+}
+
+h1, h2, h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+p, span, label {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 15px 0;
     width: 100%;
-    margin: 25px;
+}
+
+/* ================= CONTAINER PRINCIPAL ================= */
+.container-pagina {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 30px;
+}
+
+/* ================= FORMULÁRIO DE CADASTRO ================= */
+.pagina-cadastro {
+    width: 100%;
+    display: flex;
     justify-content: center;
-
 }
 
-#inNome{
-    background-color: #515151;
-    border-radius: 12px ;
+.section-form-cadastro {
+    width: 100%;
+    max-width: 700px;
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
-#inEmail{
-    background-color: #515151;
-    border-radius: 12px ;
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-#inCpf{
-    background-color: #515151;
-    border-radius: 12px ;
+
+fieldset {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #cccccc;
 }
-#inSenha{
-    background-color: #515151;
-    border-radius: 12px ;
+
+legend {
+    padding: 0 10px;
+    color: #ffcc00;
+    font-weight: bold;
 }
-#inConfirmaSenha{
-    background-color: #515151;
-    border-radius: 12px ;
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #bbb;
 }
-.opcao-proffisao{
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid #ffcc00;
+    border-color: transparent;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#inNome, #inEmail, #inCpf, #inSenha, #inConfirmarSenha {
+    background-color: #515151;
+    border-radius: 8px;
+}
+
+.opcao-proffisao, .opcao-veiculo {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: static;
-    
+    gap: 15px;
+    align-items: center;
 }
-.radio-content{
-    position:relative;
-    bottom: 14px ;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: start;
-}
- #inCliente{
-    position: relative;
-    right: 360px ;
-    top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
 
-}
-#inEmpresario{
-    position: relative;
-    right: 360px ;
-    top: 27px;
+.radio-content {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
-#inEntregador{
-     position: relative;
-    right: 360px ;
-    top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
 
-}
-.opcao-veiculo{
+.acoes-form {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: static;
-    height: 480px;
-    padding-top: 12px;
+    gap: 15px;
+    justify-content: center;
 }
-#inBicicleta{
-     position: relative;
-    right: 360px ;
-    top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
-}
-#inMoto{
-     position: relative;
-    right: 360px ;
-    top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
-}
-#inCarro{
-     position: relative;
-    right: 360px ;
-    top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
-}
-#inOutroVeiculo{
-     position: relative;
-    right: 360px ;
-    top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
-}
-#inNaoPossuiVeiculo{
-     position: relative;
-    right: 360px ;
-    top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start ;
-    text-align: start;
-}
-#btnEnviar{
-    border-radius: 12px;
+
+#btnEnviar, #btnResetar, button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
     background-color: #515151;
-    transition: background .5s ease-out;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-#btnResetar{
-    border-radius: 12px;
-    background-color: #515151;
-    transition: background .5s ease-out;
-}
-#btnEnviar:hover{
-    background-color: #717171 ;
-}
-#btnResetar:hover{
+
+#btnEnviar:hover, #btnResetar:hover, button:hover {
     background-color: #717171;
 }
-.icone-seta-content{
+
+/* ================= ESTRUTURA DE PERFIS E SEÇÕES DE PÁGINAS ================= */
+.pagina-cliente, .pagina-empresario, .pagina-entregador {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;    
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.section-perfil {
+    flex: 1 1 300px;
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.article-perfil, .article-info-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header-info-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.tipo-perfil {
+    background-color: #ffcc00;
+    color: #121212;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.img-perfil-cliente, .img-perfil-empresario, .img-perfil-chat {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #444;
+    object-fit: cover;
+}
+
+.info-principais, .section-info-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-saldo {
+    font-size: 1.4rem;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.title-forma-pagamento, .title-cnpj, .title-biografia {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.info-forma-pagamentos, .info-cnpj {
+    color: #fff;
+}
+
+.config-alteracao-perfil {
+    background-color: #333;
+    margin-top: 10px;
+}
+
+/* ================= CONTEÚDO PRINCIPAL (PEDIDOS) ================= */
+.section-principal {
+    flex: 2 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-pedidos, .post-pedidos-anteriores, .post-pedido-atual, .post-pedido-anterior {
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header-post-pedidos, .header-post-pedidos-anteriores, .header-post-pedido, .header-post-pedido-anterior {
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+.pedido {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.preco-pedido {
+    font-weight: bold;
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+.taxa-retida {
+    font-size: 0.85rem;
+    color: #e74c3c;
+}
+
+.title-status-entrega {
+    margin-top: 5px;
+}
+
+.status-entrega {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.footer-opcoes-pedido, .footer-post-entrega, .footer-pedido-anterior {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.chat-entregador, .btn-chat-entregador {
+    background-color: #2980b9;
+}
+
+.cancela-pedido, .btn-cancelar-pedido {
+    background-color: #c0392b;
+}
+
+.finalizar-entrega {
+    background-color: #27ae60;
+}
+
+.novo-pedido, .ver-informacoes {
+    background-color: #8e44ad;
+    margin-top: 10px;
+}
+
+/* ================= CATÁLOGO DE PRODUTOS ================= */
+.info-produtos-vendidos {
+    width: 100%;
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.produto-content {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.preco-produto {
+    color: #ffcc00;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ================= CONFIGURAÇÕES E BANCOS ================= */
+.section-configs {
+    width: 100%;
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-config-financeiras {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.addBanco, #btnEnviarConfig {
+    background-color: #27ae60;
+    margin-top: 5px;
+}
+
+/* ================= DIÁLOGOS E CHAT ================= */
+dialog {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    max-width: 500px;
+    width: 90%;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.msg-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msg-content {
+    min-height: 120px;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.caixa-dialogo {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ================= PAINEL E NAVEGAÇÃO ================= */
+.cabecalho {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nome-entregador {
+    color: #fff;
+}
+
+.documento-entregador {
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+.icone-seta-content {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.icone-seta {
+    color: #ffcc00;
     text-decoration: none;
-    color: white;
-    position: relative;
-    right: 355px;
-    top: 10px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: #222;
+    border-radius: 6px;
+    transition: background-color 0.3s;
 }
-.icone-seta{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 30px;
-    opacity: 1;
-    position: relative;
-}
-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-height: 900px;
-}
-article{
-     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-height: 900px;
-    height: 300px;
-}
-.informacoes-pessoais{
 
-}
-.informacoes-local{
-
-}
-.forma-cadastro{
-
-}
-.pagina-cliente{
-
-}
-.section-perfil{
-
-}
-.article-info-perfil{
-
-}
-.header-info-perfil{
-
-}
-.info-saldo{
-
-}
-.tipo-perfil{
-
-}
-.info-forma-pagamentos{
-
-}
-.section-principal{
-
-}
-.section-configs{
-    width: 100%;
-    height: 1100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.pagina-empresario{
-
-}
-.pagina-entregador{
-
-}
-.header-info-perfil{
-
-}
-.post-pedidos{
-
-}
-.header-post-pedidos{
-
-}
-.post-pedidos-anteriores{
-
-}
-.header-post-pedidos-anteriores{
-
+.icone-seta:hover {
+    background-color: #333;
 }
